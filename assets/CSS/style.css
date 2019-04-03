@@ -1,11 +1,37 @@
 /* CSS pour projet de groupe "VASM" */
 
+/* Passer la souris sur les boutons pour que le texte se souligne */
 .souligne:hover{
   border-bottom: 2px solid black;
 }
 
 .souligne2:hover{
   border-bottom: 2px solid white;
+}
+
+/* Cacher les sélécteurs gauche/droite */
+.v_ind{
+  opacity: 0;
+}
+
+/* Les indicateurs deviennent des petits points */
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+/* Positionnement du texte dans la diapo */
+.v_diap1{
+  position: absolute;
+  top: 35%;
+  margin-left: -20px;
+}
+
+.v_diap2{
+  position: absolute;
+  top: 5%;
+  margin-left: -20px;
 }
 
 /* Style du texte à l'intérieur des images (<767px) */
@@ -21,15 +47,22 @@
 
 #v_h3{
   font-weight: bold;
+  font-size: 22px;
 }
 
 #v_h32{
   font-weight: bold;
   color: black;
+  font-size: 22px;
+}
+
+#v_pa{
+  font-size: 14px;
 }
 
 #v_p{
   color: black;
+  font-size: 14px;
 }
 
 /* Style du texte à l'extérieur des images (>767px) */
@@ -94,6 +127,8 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/* À partir d'ici, ce sont les media-queries, indispensables à un responsive correct. */
 
 @media all and (max-width:539px){
   #v_img{
