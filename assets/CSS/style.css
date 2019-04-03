@@ -5,3 +5,19 @@ main h3{
     font-weight: bold;
     font-size: 1.2em;
 }
+
+/* le text de l'article principal doit être centré verticalement */
+#S_Article_Principal div{
+    position: absolute;
+    top: 25%;
+}
+/* effet de grossissement du texte lors du passage sur le boutton de l'article principal */
+#S_Article_Principal button{
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+#S_Article_Principal button:hover
+{
+    text-decoration:underline;
+    letter-spacing: 1px;
+}
