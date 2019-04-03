@@ -16,22 +16,22 @@
 
 /* Les indicateurs deviennent des petits points */
 .carousel-indicators li {
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 100%;
 }
 
-/* Positionnement du texte dans la diapo */
+/* Positionnement du texte dans la diapo à l'intérieur des images (<767px) */
 .v_diap1{
   position: absolute;
   top: 35%;
-  margin-left: -20px;
+  margin-left: -40px;
 }
 
 .v_diap2{
   position: absolute;
   top: 5%;
-  margin-left: -20px;
+  margin-left: -40px;
 }
 
 /* Style du texte à l'intérieur des images (<767px) */
