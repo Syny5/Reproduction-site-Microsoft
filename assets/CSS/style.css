@@ -1,22 +1,23 @@
-/* CSS pour projet de groupe "VASM" */
-/* a:link {
-    color: gray;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:visited {
-    color: pink;
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-  } */
+footer a{
+  color: gray;
+  font-size: small;
+}
+
+footer h6{
+  color: gray;
+  font-weight: bold;
+  margin-top: 10%;
+}
+
+footer p{
+  margin-bottom: 6px;
+}
+
+footer{
+  background: #F2F2F2;
+}
+
+.row{
+  margin-left: 15px;
+}
 
