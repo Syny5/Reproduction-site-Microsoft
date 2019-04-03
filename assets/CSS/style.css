@@ -5,7 +5,6 @@ main h3{
     font-weight: bold;
     font-size: 1.2em;
 }
-
 /* le text de l'article principal doit être centré verticalement */
 #S_Article_Principal div{
     position: absolute;
@@ -20,4 +19,20 @@ main h3{
 {
     text-decoration:underline;
     letter-spacing: 1px;
+}
+/* carrousel articles haut (ne s'affiche qu'en mobile)*/
+#S_Carrousel_Articles_Haut, #S_Carrousel_Articles_Bas{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
+#S_Carrousel_Articles_Haut p, #S_Carrousel_Articles_Haut h3,
+#S_Carrousel_Articles_Bas p, #S_Carrousel_Articles_Bas h3{
+    text-shadow: 0px 1px 10px white;
+    color: black;
+}
+#S_Carrousel_Articles_Haut a, #S_Carrousel_Articles_Bas a{
+    text-shadow: 0px 1px 1px black;
 }
