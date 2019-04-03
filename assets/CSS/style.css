@@ -1,1 +1,75 @@
-/* CSS pour projet de groupe "VASM" */
+.M_logoW
+{
+  width: 50%;
+  height: 100%;
+}
+
+.M_logoS
+{
+  margin-right: 3px;
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.M_logoShop
+{
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+}
+
+.M_soulign:hover
+{
+  border-bottom: 3px solid black;
+}
+
+.M_noir, .M_noir:hover
+{
+  color: black;
+}
+
+.M_fond
+{
+  background-color: #F2F2F2;
+  border-bottom: 1px black solid;
+}
+
+.M_basMenu
+{
+  background-color: #e5e5e5;
+}
+
+.M_deroul:focus
+{
+  background-color: #F2F2F2;
+}
+
+
+.dropdown-menu
+{
+  position: absolute;
+  left: -800px;
+  width: 1100px;
+}
+
+.M_logo
+{
+  margin-right: -100px;
+}
+
+input[type=text]
+{
+  width: 100px;
+  /* -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out; */
+}
+
+input[type=text]:focus
+{
+  position: absolute;
+  z-index: 999;
+  width: 87%;
+  margin-left: 138px;
+  margin-top: 4px;
+}
