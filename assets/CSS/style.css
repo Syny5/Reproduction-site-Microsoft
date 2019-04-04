@@ -1,71 +1,64 @@
+/* CSS de victor */
 /* Stylisation de la partie Réseaux Sociaux */
 .v_RS{
   width: 28px;
   height: 28px;
 }
+.v_RS:hover{
+    opacity:.85;
+}
 /* Passer la souris sur les boutons pour que le texte se souligne */
 .souligne:hover{
   border-bottom: 2px solid black;
 }
-
 .souligne2:hover{
   border-bottom: 2px solid white;
 }
-
 /* Cacher les sélécteurs gauche/droite */
 .v_ind{
   opacity: 0;
 }
-
 /* Les indicateurs deviennent des petits points */
 .carousel-indicators li {
   width: 5px;
   height: 5px;
   border-radius: 100%;
 }
-
 /* Positionnement du texte dans la diapo à l'intérieur des images (<767px) */
 .v_diap1{
   position: absolute;
   top: 35%;
   margin-left: -40px;
 }
-
 .v_diap2{
   position: absolute;
   top: 5%;
   margin-left: -40px;
 }
-
 /* Modification des images du Carrousel */
 #v_img, #v_img2{
   width: 100%;
   object-fit: cover;
   height: 400px;
 }
-
 /* Style du texte à l'intérieur des images (<767px) */
 #v_btn1{
   border-radius: 0px;
   color: black
 }
-
 #v_btn2, #v_btn22{
   background-color: black;
   border-radius: 0px;
 }
-
 #v_h3{
   font-weight: bold;
   font-size: 22px;
 }
-
 #v_h32{
   font-weight: bold;
   color: black;
   font-size: 22px;
 }
-
 #v_pa{
   font-size: 14px;
 }
@@ -74,10 +67,7 @@
   color: black;
   font-size: 14px;
 }
-
-/* Style du texte à l'extérieur des images (>767px) */
 /* Première partie */
-
 .v_zone1{
   background-color: #333333;
   height: 290px;
@@ -86,29 +76,24 @@
   align-items: center;
   justify-content: center;
 }
-
 #v_text1{
     text-align: center;
     font-weight: bold;
     color: white;
     font-size: 20px;
 }
-
 #v_para1{
     text-align: center;
     color: white;
     font-size: 16px;
 }
-
 #v_button1{
   border-radius: 0px;
   color: black;
   margin-left: auto;
   margin-right: auto;
 }
-
 /* Deuxième partie */
-
 .v_zone2{
   background-color: #e6e6e6;
   height: 290px;
@@ -117,23 +102,58 @@
   align-items: center;
   justify-content: center;
 }
-
 #v_text2{
     text-align: center;
     font-weight: bold;
     color: black;
     font-size: 20px;
 }
-
 #v_para2{
     text-align: center;
     color: black;
     font-size: 16px;
 }
-
 #v_button2{
   border-radius: 0px;
   color: black;
   margin-left: auto;
   margin-right: auto;
+}
+/* Début CSS Sébastieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeen */
+/* les titre h3 du main sont en gras */
+main h3{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+/* le text de l'article principal doit être centré verticalement */
+#S_Article_Principal div{
+    position: absolute;
+    top: 25%;
+}
+/* effet de grossissement du texte lors du passage sur le boutton de l'article principal */
+#S_Article_Principal button, #S_Article_Principal_hidden button{
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+#S_Article_Principal button:hover, #S_Article_Principal_hidden button:hover
+{
+    text-decoration:underline;
+    letter-spacing: 1px;
+}
+/* carrousel articles haut (ne s'affiche qu'en mobile)*/
+#S_Carrousel_Articles_Haut, #S_Carrousel_Articles_Bas{
+    height: auto;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
+/* mise en forme du texte des carousels de type article */
+#S_Carrousel_Articles_Haut p, #S_Carrousel_Articles_Haut h3,
+#S_Carrousel_Articles_Bas p, #S_Carrousel_Articles_Bas h3{
+    text-shadow: 0px 1px 10px white;
+    color: black;
+}
+#S_Carrousel_Articles_Haut a, #S_Carrousel_Articles_Bas a{
+    text-shadow: 0px 1px 1px black;
 }
