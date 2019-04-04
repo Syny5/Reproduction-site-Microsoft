@@ -63,26 +63,12 @@
   width: 100%;
 }
 
-
-/* Classe pour barre de recherche v1 */
+/* Classe pour barre de recherche */
 input[type=text]
 {
   display: none;
   position: absolute;
   width: 55%;
-  top: calc(30%);
+  top: 1.35em;
   left: 7.2em;
-  /* -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease; */
 }
-
-.caché
-{
-  display: none;
-}
-
-/* input[type=text]:focus
-{
-  position: absolute;
-  width: 10em;
-} */
