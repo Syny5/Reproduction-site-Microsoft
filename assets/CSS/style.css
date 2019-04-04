@@ -1,3 +1,9 @@
+/* A FAIRE */
+/* Trouver le moyen de changer la couleur du menu dropdown
+en mode petit sans que ça touche la version grande */
+
+
+/* Modif du logo Windows grand écran */
 .M_logoW
 {
   width: 6.75em;
@@ -5,70 +11,76 @@
   padding: 0;
   margin: 0;
 }
-
+/* Modif pour le menu type dropdown, change le curseur au survol */
 .dropdown-menu
 {
   padding: 0;
   cursor: zoom-in;
 }
-
-.M_logoS
-{
-  margin-right: 3px;
-  margin-left: 5px;
-  width: 24px;
-  height: 24px;
-}
-
+/* Modif appliquée au loho "classique" */
 .M_logo
 {
   width: 1.5em;
   height: 1.5em;
 }
-
+/* Ajoute un effet surligner au survol des liens */
 .M_soulign:hover
 {
   border-bottom: 3px solid black;
 }
-
+/* Modif la couleur des liens */
 .M_noir, .M_noir:hover
 {
   color: black;
 }
-
+/* Modif de la couleur de fond du menu dropdown écran large */
 .M_fond
 {
   background-color: #F2F2F2;
   border-bottom: 1px black solid;
 }
-
+/* Change le fond au pied du menu dropdown */
 .M_basMenu
 {
   background-color: #e5e5e5;
 }
-
+/* Change la couleur du bouton menu dropdown quand on clik dessus */
 .M_deroul:focus
 {
   background-color: #F2F2F2;
 }
-
+/* Modif la position du menu dropdown grand écran */
 .M_dropdown
 {
   left: -800px;
   width: 1100px;
 }
-
+/* Permet de prendre 100% de la place dispo */
 .taille
 {
   width: 100%;
 }
 
-/* Classe pour barre de recherche */
-input[type=text]
+/* Classe pour barre de recherche pour petit écran*/
+.searchHide
 {
   display: none;
+  /* En absolue pour qu'elle puisse passer au dessus d'autres éléments */
   position: absolute;
   width: 55%;
   top: 1.35em;
   left: 7.2em;
+}
+/* Classe pour la barre de recherche grand écran */
+.search
+{
+  width: 6em;
+  /* Effet de transition sur la largeur au click  */
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+}
+/* Agrandi la barre de recherche quand on clik dessus */
+.search:focus
+{
+  width: 12em;
 }

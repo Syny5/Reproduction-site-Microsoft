@@ -6,227 +6,231 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Microsoft - Page d'accueil non officielle</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
   <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
 <body>
-    <!-- container de la page pour mise en forme bootstrap, ne pas toucher -->
-    <div class="container-fluid p-lg-2 pr-0 pl-0">
-    <!-- alerte sur les cookies -->
+  <!-- container de la page pour mise en forme bootstrap, ne pas toucher -->
+  <div class="container-fluid p-lg-2 pr-0 pl-0">
 
-    <!-- header: dans le header il n'y a que la navbar-->
-    <header>
-      <nav class="d-flex navbar navbar-expand-xl navbar-light justify-content-start p-lg-2 pr-0 pl-0">
-        <a class="navbar-brand" href="#"></a>
+  <!-- alerte sur les cookies -->
 
-          <a class="test d-none d-lg-flex" href="#">
-            <img class="M_logoW" src="assets/img/logo.png" alt="Logo Microsoft">
+  <!-- header: dans le header il n'y a que la navbar-->
+  <header>
+    <!-- Navbar principale avec changement de padding quand écran large-->
+    <nav class="d-flex navbar navbar-expand-xl navbar-light p-lg-2 pr-0 pl-0">
+      <a class="navbar-brand" href="#"></a>
+        <!-- Image pour écran taille large, disparait si écran plus petit (caché de base mais flex en large et plus) -->
+        <a class="d-none d-lg-flex" href="#">
+          <img class="M_logoW" src="assets/img/logo.png" alt="Logo Microsoft">
+        </a>
+      <!-- Menu pour écran plus petit que large (display none si large) permet l'affichage et la réorganisation des icônes -->
+      <span class="d-flex d-lg-none taille">
+        <!-- Bouton du menu déroulant pour le responsive -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Box contenant les icônes (display none si large), taille: prends toute la place, justify: permet la mise en page -->
+        <span class="d-flex d-lg-none taille justify-content-between">
+          <!-- Partie contenant le bouton et la barre de recherche -->
+          <a class="nav-link d-lg-none" href="#">
+            <!-- Fonction JS permettant de faire disparaitre/apparaitre la barre de recherche -->
+            <img onclick="myFunction()" class="M_logo" src="assets/img/icon_search.png" alt="Bouton recherche">
           </a>
-
-          <span class="d-flex d-lg-none taille justify-content-between">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-          <span class="d-flex d-lg-none taille justify-content-between">
-
-            <a class="nav-link panier d-lg-none" href="#">
-              <img onclick="myFunction()" class="M_logo" src="assets/img/icon_search.png" alt="">
-              <input type="text" name="search" id="élemACaché" placeholder="Recherche sur noMicrosoft ...">
-            </a>
-
-            <span class="d-flex">
-              <a class="nav-link test d-flex d-lg-none" href="#">
-                <img class="M_logo" src="assets/img/icon_mic.png" alt="Logo Microsoft">
-              </a>
-            </span>
-
-            <span class="d-flex d-lg-none">
-              <a class="nav-link panier" href="#"><img class="M_logo" src="assets/img/icon_shopping.png" alt=""></a>
-              <a class="nav-link connect" href="#"><img class="M_logo" src="assets/img/icon_user.png" alt=""></a>
-            </span>
-
+          <!-- Barre de recherche, caché par défaut -->
+          <input type="text" name="search" class="searchHide" id="élemACaché" placeholder="Recherche sur noMicrosoft ...">
+          <!-- Icône Microsoft -->
+          <a class="nav-link test d-flex d-lg-none" href="#">
+            <img class="M_logo" src="assets/img/icon_mic.png" alt="Logo Microsoft">
+          </a>
+          <!-- Partie avec la panier et le côté user, mis ensemble pour qu'ils restent collés avec le justify -->
+          <span class="d-flex d-lg-none">
+            <a class="nav-link" href="https://www.microsoft.com/fr-fr/store/buy"><img class="M_logo" src="assets/img/icon_shopping.png" alt="Icone panier"></a>
+            <a class="nav-link connect" href="https://www.microsoft.com/mscomhp/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Ffr-fr%2F"><img class="M_logo" src="assets/img/icon_user.png" alt="Icon utilisateur"></a>
           </span>
         </span>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto pl-3">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="M_soulign">Office</span><span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="M_soulign">Windows</span><span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="M_soulign">Surface</span><span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="M_soulign">Xbox</span><span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="M_soulign">Offre spéciales</span><span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="M_soulign">Support technique</span><span class="sr-only">(current)</span></a>
-            </li>
-            <!-- Modif du menu dropdown pour version mobile / tablette -->
-            <li class="nav-item active d-lg-none">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Logiciels
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">Applications Windows</a>
-                  <a class="dropdown-item" href="#!">OneDrive</a>
-                  <a class="dropdown-item" href="#!">Outlook</a>
-                  <a class="dropdown-item" href="#!">Skype</a>
-                  <a class="dropdown-item" href="#!">OneNote</a>
-                </div>
+      </span>
+      <!-- Partie gauche de la navbar principale -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto pl-3">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://products.office.com/fr-fr/home"><span class="M_soulign">Office</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.microsoft.com/fr-fr/windows/"><span class="M_soulign">Windows</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.microsoft.com/fr-fr/surface"><span class="M_soulign">Surface</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.xbox.com/"><span class="M_soulign">Xbox</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.microsoft.com/fr-fr/store/b/sale"><span class="M_soulign">Offre spéciales</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://support.microsoft.com/fr-fr"><span class="M_soulign">Support technique</span></a>
+          </li>
+          <!-- Modif du menu dropdown pour version mobile / tablette, caché si écran plus grand-->
+          <!-- Rajoute plusieurs menus dropdown rajoutant le contenu du grand menu dropdown  -->
+          <li class="nav-item active d-lg-none ">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Logiciels
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu0">
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/windows/windows-10-apps">Applications Windows</a>
+                <a class="dropdown-item" href="https://onedrive.live.com/about/fr-fr/">OneDrive</a>
+                <a class="dropdown-item" href="https://outlook.live.com/owa/">Outlook</a>
+                <a class="dropdown-item" href="https://www.skype.com/fr/">Skype</a>
+                <a class="dropdown-item" href="https://www.onenote.com/?omkt=fr-FR">OneNote</a>
               </div>
-            </li>
-            <li class="nav-item active d-lg-none">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  PC et appareils
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">PC et tablettes</a>
-                  <a class="dropdown-item" href="#!">Accessoires</a>
-                </div>
+            </div>
+          </li>
+          <li class="nav-item active d-lg-none">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PC et appareils
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/windows/devices">PC et tablettes</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/accessories/fr-fr">Accessoires</a>
               </div>
-            </li>
-            <li class="nav-item active d-lg-none">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Divertissement
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">Xbox et jeux</a>
-                  <a class="dropdown-item" href="#!">Jeux PC</a>
-                  <a class="dropdown-item" href="#!">Jeux pour Windows</a>
-                  <a class="dropdown-item" href="#!">Films et TV</a>
-                </div>
+            </div>
+          </li>
+          <li class="nav-item active d-lg-none">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Divertissement
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <a class="dropdown-item" href="https://www.xbox.com/fr-fr/games/xbox-one?xr=shellnav">Xbox et jeux</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/windows/windows-10-games">Jeux PC</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/games/windows?icid=TopNavWindowsGames">Jeux pour Windows</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/movies-and-tv?icid=TopNavMoviesAndTv">Films et TV</a>
               </div>
-            </li>
-            <li class="nav-item active d-lg-none">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Entreprise
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">Microsoft Azure</a>
-                  <a class="dropdown-item" href="#!">Microsoft Dynamics 365</a>
-                  <a class="dropdown-item" href="#!">Microsoft 365</a>
-                  <a class="dropdown-item" href="#!">Microsoft Industry</a>
-                  <a class="dropdown-item" href="#!">Plateforme de données</a>
-                  <a class="dropdown-item" href="#!">Microsoft Advertising</a>
-                </div>
+            </div>
+          </li>
+          <li class="nav-item active d-lg-none">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Entreprise
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                <a class="dropdown-item" href="https://azure.microsoft.com/fr-fr/">Microsoft Azure</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/dynamics365/home">Microsoft Dynamics 365</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/microsoft-365/?omkt=fr-FR">Microsoft 365</a>
+                <a class="dropdown-item" href="https://enterprise.microsoft.com/fr-fr/">Microsoft Industry</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/sql-server/">Plateforme de données</a>
+                <a class="dropdown-item" href="https://go.microsoft.com/fwlink/?linkid=2026638">Microsoft Advertising</a>
               </div>
-            </li>
-            <li class="nav-item active d-lg-none">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Développeurs & IT
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">.NET</a>
-                  <a class="dropdown-item" href="#!">Visual Studio</a>
-                  <a class="dropdown-item" href="#!">Windows Server</a>
-                  <a class="dropdown-item" href="#!">Développez des applications Windows</a>
-                  <a class="dropdown-item" href="#!">Docs</a>
-                </div>
+            </div>
+          </li>
+          <li class="nav-item active d-lg-none">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Développeurs & IT
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                <a class="dropdown-item" href="https://www.microsoft.com/net/">.NET</a>
+                <a class="dropdown-item" href="https://visualstudio.microsoft.com/">Visual Studio</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/cloud-platform/windows-server">Windows Server</a>
+                <a class="dropdown-item" href="https://developer.microsoft.com/fr-fr/windows">Développez des applications Windows</a>
+                <a class="dropdown-item" href="https://docs.microsoft.com/fr-fr/">Docs</a>
               </div>
-            </li>
-            <li class="nav-item active d-lg-none">
-              <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Autres
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <a class="dropdown-item" href="#!">Microsoft Store</a>
-                  <a class="dropdown-item" href="#!">Microsoft Rewards</a>
-                  <a class="dropdown-item" href="#!">Téléchargements gratuits et pour la sécurité</a>
-                  <a class="dropdown-item" href="#!">Éducation</a>
-                  <a class="dropdown-item" href="#!">Cartes cadeaux</a>
-                </div>
+            </div>
+          </li>
+          <li class="nav-item active d-lg-none">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Autres
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/b/home">Microsoft Store</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/rewards">Microsoft Rewards</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/download/default.aspx">Téléchargements gratuits et pour la sécurité</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/education?icid=CNavMSCOML0_Studentsandeducation">Éducation</a>
+                <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/b/gift-cards">Cartes cadeaux</a>
               </div>
-            </li>
-            <li class="nav-item active d-lg-none">
-              <span>VUE PLAN DU SITE ></span>
-            </li>
-          </ul>
-        </div>
-
-      <span class="d-flex">
-        <!-- Menu avec gros menu déroulant -->
+            </div>
+          </li>
+          <li class="nav-item active d-lg-none">
+            <a class="nav-link" href="https://www.microsoft.com/fr-fr/sitemap.aspx"><span class="M_soulign">VUE PLAN DU SITE ></span></a>
+          </li>
+        </ul>
+      </div>
+      <!-- Partie droite de la navbar principale -->
+      <div class="d-flex">
+        <!-- Menu avec gros menu déroulant, disparait en dessous d'écran large, laissant la place au menu déroulant -->
         <div class="btn-group d-none d-lg-block">
+          <!-- Bouton du grand menu dropdown -->
           <button type="button" class="btn btn-default dropdown-toggle M_deroul" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="M_soulign">Tout Microsoft</span>
+          </button>
           <!-- Contenu du menu déroulant -->
           <ul class="dropdown-menu M_dropdown M_fond">
             <div class="d-flex">
               <div class="p-2 flex-fill">
                 <li><p class="font-weight-bold">Logiciels</p></li>
-                <li><a href="#" title="Lien 2" class="M_noir">Applications Windows</a></li>
-                <li><a href="#" title="Lien 3" class="M_noir">OneDrive</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Outlook</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Skype</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">OneNote</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/windows/windows-10-apps" title="Lien 2" class="M_noir">Applications Windows</a></li>
+                <li><a href="https://onedrive.live.com/about/fr-fr/" title="Lien 3" class="M_noir">OneDrive</a></li>
+                <li><a href="https://outlook.live.com/owa/" title="Lien 4" class="M_noir">Outlook</a></li>
+                <li><a href="https://www.skype.com/fr/" title="Lien 4" class="M_noir">Skype</a></li>
+                <li><a href="https://www.onenote.com/?omkt=fr-FR" title="Lien 4" class="M_noir">OneNote</a></li>
               </div>
               <div class="p-2 flex-fill">
                 <li><p class="font-weight-bold">PC et appareils</p></li>
-                <li><a href="#" title="Lien 2" class="M_noir">PC et tablettes</a></li>
-                <li><a href="#" title="Lien 3" class="M_noir">Accessoires</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/windows/devices" title="Lien 2" class="M_noir">PC et tablettes</a></li>
+                <li><a href="https://www.microsoft.com/accessories/fr-fr" title="Lien 3" class="M_noir">Accessoires</a></li>
               </div>
               <div class="p-2 flex-fill">
                 <li><p class="font-weight-bold">Divertissement</p></li>
-                <li><a href="#" title="Lien 2" class="M_noir">Xbox et jeux</a></li>
-                <li><a href="#" title="Lien 3" class="M_noir">Jeux PC</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Jeux pour Windows</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Films et TV</a></li>
+                <li><a href="https://www.xbox.com/fr-fr/games/xbox-one?xr=shellnav" title="Lien 2" class="M_noir">Xbox et jeux</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/windows/windows-10-games" title="Lien 3" class="M_noir">Jeux PC</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/store/games/windows?icid=TopNavWindowsGames" title="Lien 4" class="M_noir">Jeux pour Windows</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/store/movies-and-tv?icid=TopNavMoviesAndTv" title="Lien 4" class="M_noir">Films et TV</a></li>
               </div>
               <div class="p-2 flex-fill">
                 <li><p class="font-weight-bold">Entreprise</p></li>
-                <li><a href="#" title="Lien 2" class="M_noir">Microsoft Azure</a></li>
-                <li><a href="#" title="Lien 3" class="M_noir">Microsoft Dynamics 365</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Microsoft 365</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Microsoft Industry</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Plateforme de données</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Microsoft Advertising</a></li>
+                <li><a href="https://azure.microsoft.com/fr-fr/" title="Lien 2" class="M_noir">Microsoft Azure</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/dynamics365/home" title="Lien 3" class="M_noir">Microsoft Dynamics 365</a></li>
+                <li><a href="https://www.microsoft.com/microsoft-365/?omkt=fr-FR" title="Lien 4" class="M_noir">Microsoft 365</a></li>
+                <li><a href="https://enterprise.microsoft.com/fr-fr/" title="Lien 4" class="M_noir">Microsoft Industry</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/sql-server/" title="Lien 4" class="M_noir">Plateforme de données</a></li>
+                <li><a href="https://go.microsoft.com/fwlink/?linkid=2026638" title="Lien 4" class="M_noir">Microsoft Advertising</a></li>
               </div>
               <div class="p-2 flex-fill">
                 <li><p class="font-weight-bold">Développeurs & IT</p></li>
-                <li><a href="#" title="Lien 2" class="M_noir">.NET</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Visual Studio</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Windows Server</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Développez des applications Windows</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Docs</a></li>
+                <li><a href="https://www.microsoft.com/net/" title="Lien 2" class="M_noir">.NET</a></li>
+                <li><a href="https://visualstudio.microsoft.com/" title="Lien 4" class="M_noir">Visual Studio</a></li>
+                <li><a href="https://www.microsoft.com/cloud-platform/windows-server" title="Lien 4" class="M_noir">Windows Server</a></li>
+                <li><a href="https://developer.microsoft.com/fr-fr/windows" title="Lien 4" class="M_noir">Développez des applications Windows</a></li>
+                <li><a href="https://docs.microsoft.com/fr-fr/" title="Lien 4" class="M_noir">Docs</a></li>
               </div>
               <div class="p-2 flex-fill ">
                 <li><p class="font-weight-bold">Autres</p></li>
-                <li><a href="#" title="Lien 2" class="M_noir">Microsoft Store</a></li>
-                <li><a href="#" title="Lien 3" class="M_noir">Microsoft Rewards</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Téléchargements gratuits et pour la sécurité</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Éducation</a></li>
-                <li><a href="#" title="Lien 4" class="M_noir">Cartes cadeaux</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/store/b/home" title="Lien 2" class="M_noir">Microsoft Store</a></li>
+                <li><a href="https://www.microsoft.com/rewards" title="Lien 3" class="M_noir">Microsoft Rewards</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/download/default.aspx" title="Lien 4" class="M_noir">Téléchargements gratuits et pour la sécurité</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/education?icid=CNavMSCOML0_Studentsandeducation" title="Lien 4" class="M_noir">Éducation</a></li>
+                <li><a href="https://www.microsoft.com/fr-fr/store/b/gift-cards" title="Lien 4" class="M_noir">Cartes cadeaux</a></li>
               </div>
             </div>
             <div class="text-center M_basMenu">
-              <span>VUE PLAN DU SITE ></span>
+              <a class="nav-link" href="https://www.microsoft.com/fr-fr/sitemap.aspx"><span class="M_soulign M_noir">VUE PLAN DU SITE ></span></a>
             </div>
           </ul>
         </div>
-
+        <!-- Partie contenant la barre de recherche, le panier et le côté utilisateur -->
         <span class="d-none d-lg-flex">
-          <input type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
-          <a class="nav-link panier" href="#"><span class="M_noir M_soulign">Panier</span></a>
-          <a class="nav-link connect" href="#"><span class="M_noir">Se connecter</span><span class="sr-only"></span></a>
+          <!-- Barre de recherche s'agrandissant au focus -->
+          <input class="search" type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
+          <a class="nav-link" href="https://www.microsoft.com/fr-fr/store/buy"><span class="M_noir M_soulign">Panier</span></a>
+          <a class="nav-link connect" href="https://www.microsoft.com/mscomhp/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Ffr-fr%2F"><span class="M_noir">Se connecter</span><span class="sr-only"></span></a>
         </span>
-      </span>
-
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
         <!-- contenu principal de la page -->
         <main>
             <!-- carrousel d'images -->
@@ -240,13 +244,19 @@
 
         </footer>
     </div>
+    <!-- Script JS faisant apparaitre et disparaitre la barre de recherche version mobile-->
     <script>
       function myFunction()
       {
+        // Variable x prenant comme valeur l'élément avec l'id éléACaché
         var x = document.getElementById("élemACaché");
+        // Si son display est égale à block alors ...
         if (x.style.display === "block") {
+          // ... on le change en display none (il disparait)...
           x.style.display = "none";
+          // ... sinon ...
         } else {
+          // ... on change en display block (il réapparaît)
           x.style.display = "block";
         }
       }
