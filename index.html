@@ -12,12 +12,12 @@
     </head>
     <body>
         <!-- container de la page pour mise en forme bootstrap, ne pas toucher -->
-        <div class="container-fluid">
+        <div class="container-fluid p-lg-2 pr-0 pl-0">
         <!-- alerte sur les cookies -->
 
         <!-- header: dans le header il n'y a que la navbar-->
         <header>
-          <nav class="navbar navbar-expand-xl navbar-light justify-content-start">
+          <nav class="navbar navbar-expand-xl navbar-light justify-content-start p-lg-2 pr-0 pl-0">
             <a class="navbar-brand" href="#"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -27,8 +27,21 @@
               <img class="M_logoW" src="assets/img/logo.png" alt="Logo Microsoft">
             </a>
 
+            <span class="d-flex d-lg-none">
+
+
+                <a class="nav-link panier" href="#">
+                  <img class="M_logo" src="assets/img/icon_search.png" alt="">
+                  <input type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
+                </a>
+
+
+              <a class="nav-link panier" href="#"><img class="M_logo" src="assets/img/icon_shopping.png" alt=""></a>
+              <a class="nav-link connect" href="#"><img class="M_logo" src="assets/img/icon_user.png" alt=""></span></a>
+            </span>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
+              <ul class="navbar-nav mr-auto pl-3">
                 <li class="nav-item active">
                   <a class="nav-link" href="#"><span class="M_soulign">Office</span><span class="sr-only">(current)</span></a>
                 </li>
@@ -47,77 +60,160 @@
                 <li class="nav-item active">
                   <a class="nav-link" href="#"><span class="M_soulign">Support technique</span><span class="sr-only">(current)</span></a>
                 </li>
-              </ul>
-
-
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle M_deroul" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="M_soulign">Tout Microsoft</span>
-
-                    <ul class="dropdown-menu M_fond">
-                      <div class="d-flex align-items-stretch">
-                        <div class="p-2 flex-fill">
-                          <li><p class="font-weight-bold">Logiciels</p></li>
-                          <li><a href="#" title="Lien 2" class="M_noir">Applications Windows</a></li>
-                          <li><a href="#" title="Lien 3" class="M_noir">OneDrive</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Outlook</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Skype</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">OneNote</a></li>
-                        </div>
-                        <div class="p-2 flex-fill">
-                          <li><p class="font-weight-bold">PC et appareils</p></li>
-                          <li><a href="#" title="Lien 2" class="M_noir">PC et tablettes</a></li>
-                          <li><a href="#" title="Lien 3" class="M_noir">Accessoires</a></li>
-                        </div>
-                        <div class="p-2 flex-fill">
-                          <li><p class="font-weight-bold">Divertissement</p></li>
-                          <li><a href="#" title="Lien 2" class="M_noir">Xbox et jeux</a></li>
-                          <li><a href="#" title="Lien 3" class="M_noir">Jeux PC</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Jeux pour Windows</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Films et TV</a></li>
-                        </div>
-                        <div class="p-2 flex-fill">
-                          <li><p class="font-weight-bold">Entreprise</p></li>
-                          <li><a href="#" title="Lien 2" class="M_noir">Microsoft Azure</a></li>
-                          <li><a href="#" title="Lien 3" class="M_noir">Microsoft Dynamics 365</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Microsoft 365</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Microsoft Industry</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Plateforme de données</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Microsoft Advertising</a></li>
-                        </div>
-                        <div class="p-2 flex-fill">
-                          <li><p class="font-weight-bold">Développeurs & IT</p></li>
-                          <li><a href="#" title="Lien 2" class="M_noir">.NET</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Visual Studio</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Windows Server</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Développez des applications Windows</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Docs</a></li>
-                        </div>
-                        <div class="p-2 flex-fill ">
-                          <li><p class="font-weight-bold">Autres</p></li>
-                          <li><a href="#" title="Lien 2" class="M_noir">Microsoft Store</a></li>
-                          <li><a href="#" title="Lien 3" class="M_noir">Microsoft Rewards</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Téléchargements gratuits et pour la sécurité</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Éducation</a></li>
-                          <li><a href="#" title="Lien 4" class="M_noir">Cartes cadeaux</a></li>
-                        </div>
-                      </div>
-                      <div class="text-center M_basMenu">
-                        <span>VUE PLAN DU SITE ></span>
-                      </div>
-
-                    </ul>
+                <!-- Modif du menu dropdown pour version mobile / tablette -->
+                <li class="nav-item active d-lg-none">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Logiciels
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <a class="dropdown-item" href="#!">Applications Windows</a>
+                      <a class="dropdown-item" href="#!">OneDrive</a>
+                      <a class="dropdown-item" href="#!">Outlook</a>
+                      <a class="dropdown-item" href="#!">Skype</a>
+                      <a class="dropdown-item" href="#!">OneNote</a>
+                    </div>
                   </div>
-
-                <!-- <img src="assets/img/icon_search.png" class="img-fluid M_logoS" alt="Responsive image">
-                <input type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
-                <a class="nav-link" href="#"><span class="M_noir M_soulign">Panier</span></a>
-                <a class="nav-link" href="#"><span class="M_noir">Se connecter</span><span class="sr-only"></span></a> -->
-
+                </li>
+                <li class="nav-item active d-lg-none">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      PC et appareils
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <a class="dropdown-item" href="#!">PC et tablettes</a>
+                      <a class="dropdown-item" href="#!">Accessoires</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item active d-lg-none">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Divertissement
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <a class="dropdown-item" href="#!">Xbox et jeux</a>
+                      <a class="dropdown-item" href="#!">Jeux PC</a>
+                      <a class="dropdown-item" href="#!">Jeux pour Windows</a>
+                      <a class="dropdown-item" href="#!">Films et TV</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item active d-lg-none">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Entreprise
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <a class="dropdown-item" href="#!">Microsoft Azure</a>
+                      <a class="dropdown-item" href="#!">Microsoft Dynamics 365</a>
+                      <a class="dropdown-item" href="#!">Microsoft 365</a>
+                      <a class="dropdown-item" href="#!">Microsoft Industry</a>
+                      <a class="dropdown-item" href="#!">Plateforme de données</a>
+                      <a class="dropdown-item" href="#!">Microsoft Advertising</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item active d-lg-none">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Développeurs & IT
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <a class="dropdown-item" href="#!">.NET</a>
+                      <a class="dropdown-item" href="#!">Visual Studio</a>
+                      <a class="dropdown-item" href="#!">Windows Server</a>
+                      <a class="dropdown-item" href="#!">Développez des applications Windows</a>
+                      <a class="dropdown-item" href="#!">Docs</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item active d-lg-none">
+                  <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Autres
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <a class="dropdown-item" href="#!">Microsoft Store</a>
+                      <a class="dropdown-item" href="#!">Microsoft Rewards</a>
+                      <a class="dropdown-item" href="#!">Téléchargements gratuits et pour la sécurité</a>
+                      <a class="dropdown-item" href="#!">Éducation</a>
+                      <a class="dropdown-item" href="#!">Cartes cadeaux</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item active d-lg-none">
+                  <span>VUE PLAN DU SITE ></span>
+                </li>
+              </ul>
             </div>
 
-            <input type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
-            <a class="nav-link panier" href="#"><span class="M_noir M_soulign">Panier</span></a>
-            <a class="nav-link connect" href="#"><span class="M_noir">Se connecter</span><span class="sr-only"></span></a>
+          <span class="d-flex">
+            <!-- Menu avec gros menu déroulant -->
+            <div class="btn-group d-none d-lg-block">
+              <button type="button" class="btn btn-default dropdown-toggle M_deroul" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="M_soulign">Tout Microsoft</span>
+              <!-- Contenu du menu déroulant -->
+              <ul class="dropdown-menu M_dropdown M_fond">
+                <div class="d-flex">
+                  <div class="p-2 flex-fill">
+                    <li><p class="font-weight-bold">Logiciels</p></li>
+                    <li><a href="#" title="Lien 2" class="M_noir">Applications Windows</a></li>
+                    <li><a href="#" title="Lien 3" class="M_noir">OneDrive</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Outlook</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Skype</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">OneNote</a></li>
+                  </div>
+                  <div class="p-2 flex-fill">
+                    <li><p class="font-weight-bold">PC et appareils</p></li>
+                    <li><a href="#" title="Lien 2" class="M_noir">PC et tablettes</a></li>
+                    <li><a href="#" title="Lien 3" class="M_noir">Accessoires</a></li>
+                  </div>
+                  <div class="p-2 flex-fill">
+                    <li><p class="font-weight-bold">Divertissement</p></li>
+                    <li><a href="#" title="Lien 2" class="M_noir">Xbox et jeux</a></li>
+                    <li><a href="#" title="Lien 3" class="M_noir">Jeux PC</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Jeux pour Windows</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Films et TV</a></li>
+                  </div>
+                  <div class="p-2 flex-fill">
+                    <li><p class="font-weight-bold">Entreprise</p></li>
+                    <li><a href="#" title="Lien 2" class="M_noir">Microsoft Azure</a></li>
+                    <li><a href="#" title="Lien 3" class="M_noir">Microsoft Dynamics 365</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Microsoft 365</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Microsoft Industry</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Plateforme de données</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Microsoft Advertising</a></li>
+                  </div>
+                  <div class="p-2 flex-fill">
+                    <li><p class="font-weight-bold">Développeurs & IT</p></li>
+                    <li><a href="#" title="Lien 2" class="M_noir">.NET</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Visual Studio</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Windows Server</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Développez des applications Windows</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Docs</a></li>
+                  </div>
+                  <div class="p-2 flex-fill ">
+                    <li><p class="font-weight-bold">Autres</p></li>
+                    <li><a href="#" title="Lien 2" class="M_noir">Microsoft Store</a></li>
+                    <li><a href="#" title="Lien 3" class="M_noir">Microsoft Rewards</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Téléchargements gratuits et pour la sécurité</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Éducation</a></li>
+                    <li><a href="#" title="Lien 4" class="M_noir">Cartes cadeaux</a></li>
+                  </div>
+                </div>
+                <div class="text-center M_basMenu">
+                  <span>VUE PLAN DU SITE ></span>
+                </div>
+              </ul>
+            </div>
+
+            <span class="d-none d-lg-flex">
+              <input type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
+              <a class="nav-link panier" href="#"><span class="M_noir M_soulign">Panier</span></a>
+              <a class="nav-link connect" href="#"><span class="M_noir">Se connecter</span><span class="sr-only"></span></a>
+            </span>
+          </span>
 
           </nav>
         </header>
