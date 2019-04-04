@@ -1,49 +1,262 @@
-    <!-- ne pas modifier le html et le head -->
-    <!DOCTYPE html>
-    <html lang="fr">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <link rel="shortcut icon" href="assets/img/Linux-icon.png">
-      <title>Micro-nux - Page d'accueil non officielle, à but pédagogique</title>
-      <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
-      <link rel="stylesheet" href="assets/CSS/style.css">
+<!-- ne pas modifier le html et le head -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="shortcut icon" href="assets/img/Linux-icon.png">
+    <title>Micro-nux - Page d'accueil non officielle, à but pédagogique</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    </head>
-    <body>
+</head>
+<body>
 
-        <!-- START Bootstrap-Cookie-Alert -->
-        <div id="alertcookie" class="p-3 container-fluid couleur1">
-                <div class="row">
-                        <div class="col-12 col-md-10">
-                                <a class="cookie"><i class="fas fa-info-circle fa-lg"></i>  Ce site utilise des cookies
-                                        pour l'analyse, ainsi que pour les contenus et publicités personnalisés. En
-                                        continuant à naviguer sur ce site, vous acceptez cette utilisation.</a>
-                        </div>
-                        <div class="col-12 col-md-2 text-right">
-                                <a class="cookie"
-                                        href="https://privacy.microsoft.com/fr-fr/privacystatement#maincookiessimilartechnologiesmodule"
-                                        target="_blank">En savoir plus</a>
-                        </div>
-                </div>
+    <!-- START Bootstrap-Cookie-Alert -->
+    <div id="alertcookie" class="p-3 container-fluid couleur1">
+        <div class="row">
+            <div class="col-12 col-md-10">
+                <a class="cookie"><i class="fas fa-info-circle fa-lg"></i>  Ce site utilise des cookies
+                    pour l'analyse, ainsi que pour les contenus et publicités personnalisés. En
+                    continuant à naviguer sur ce site, vous acceptez cette utilisation.
+                </a>
+            </div>
+            <div class="col-12 col-md-2 text-right">
+                <a class="cookie"
+                href="https://privacy.microsoft.com/fr-fr/privacystatement#maincookiessimilartechnologiesmodule"
+                target="_blank">En savoir plus</a>
+            </div>
         </div>
-        <!-- END Bootstrap-Cookie-Alert -->
-        <!-- Fin cookie Andreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea -->
-        <!-- container de la page pour mise en forme bootstrap, ne pas toucher -->
-        <div class="container-fluid px-0 px-lg-5">
-            <main>
-                <!-- DÉBUT DE LA PARTIE CODE DE VICTOR -->
-                  <div class="bd-example h-100">
-                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                      <!-- Ces ol représentent les indicateurs en bas du carrousel -->
-                      <ol class="carousel-indicators">
+    </div>
+    <!-- END Bootstrap-Cookie-Alert -->
+    <!-- container de la page pour mise en forme bootstrap, ne pas toucher -->
+    <div class="container-fluid px-0 px-lg-5">
+        <!-- header: dans le header il n'y a que la navbar-->
+        <header>
+            <!-- Navbar principale avec changement de padding quand écran large-->
+            <nav class="d-flex navbar navbar-expand-xl navbar-light p-lg-2 pr-0 pl-0">
+                <a class="navbar-brand" href="#"></a>
+                <!-- Image pour écran taille large, disparait si écran plus petit (caché de base mais flex en large et plus) -->
+                <a class="d-none d-lg-flex" href="#">
+                    <img class="M_logoW" src="assets/img/logo.png" alt="Logo Microsoft">
+                </a>
+                <!-- Menu pour écran plus petit que large (display none si large) permet l'affichage et la réorganisation des icônes -->
+                <span class="d-flex d-lg-none taille">
+                    <!-- Bouton du menu déroulant pour le responsive -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Box contenant les icônes (display none si large), taille: prends toute la place, justify: permet la mise en page -->
+                    <span class="d-flex d-lg-none taille justify-content-between">
+                        <!-- Partie contenant le bouton et la barre de recherche -->
+                        <a class="nav-link d-lg-none" href="#">
+                            <!-- Fonction JS permettant de faire disparaitre/apparaitre la barre de recherche -->
+                            <img onclick="myFunction()" class="M_logo" src="assets/img/icon_search.png" alt="Bouton recherche">
+                        </a>
+                        <!-- Barre de recherche, caché par défaut -->
+                        <input type="text" name="search" class="searchHide" id="élemACaché" placeholder="Recherche sur noMicrosoft ...">
+                        <!-- Icône Microsoft -->
+                        <a class="nav-link test d-flex d-lg-none" href="#">
+                            <img class="M_logo" src="assets/img/icon_mic.png" alt="Logo Microsoft">
+                        </a>
+                        <!-- Partie avec la panier et le côté user, mis ensemble pour qu'ils restent collés avec le justify -->
+                        <span class="d-flex d-lg-none">
+                            <a class="nav-link" href="https://www.microsoft.com/fr-fr/store/buy"><img class="M_logo" src="assets/img/icon_shopping.png" alt="Icone panier"></a>
+                            <a class="nav-link connect" href="https://www.microsoft.com/mscomhp/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Ffr-fr%2F"><img class="M_logo" src="assets/img/icon_user.png" alt="Icon utilisateur"></a>
+                        </span>
+                    </span>
+                </span>
+                <!-- Partie gauche de la navbar principale -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto pl-3">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://products.office.com/fr-fr/home"><span class="M_soulign">Office</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://www.microsoft.com/fr-fr/windows/"><span class="M_soulign">Windows</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://www.microsoft.com/fr-fr/surface"><span class="M_soulign">Surface</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://www.xbox.com/"><span class="M_soulign">Xbox</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://www.microsoft.com/fr-fr/store/b/sale"><span class="M_soulign">Offre spéciales</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="https://support.microsoft.com/fr-fr"><span class="M_soulign">Support technique</span></a>
+                        </li>
+                        <!-- Modif du menu dropdown pour version mobile / tablette, caché si écran plus grand-->
+                        <!-- Rajoute plusieurs menus dropdown rajoutant le contenu du grand menu dropdown  -->
+                        <li class="nav-item active d-lg-none ">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Logiciels
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu0">
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/windows/windows-10-apps">Applications Windows</a>
+                                    <a class="dropdown-item" href="https://onedrive.live.com/about/fr-fr/">OneDrive</a>
+                                    <a class="dropdown-item" href="https://outlook.live.com/owa/">Outlook</a>
+                                    <a class="dropdown-item" href="https://www.skype.com/fr/">Skype</a>
+                                    <a class="dropdown-item" href="https://www.onenote.com/?omkt=fr-FR">OneNote</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active d-lg-none">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PC et appareils
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/windows/devices">PC et tablettes</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/accessories/fr-fr">Accessoires</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active d-lg-none">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Divertissement
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <a class="dropdown-item" href="https://www.xbox.com/fr-fr/games/xbox-one?xr=shellnav">Xbox et jeux</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/windows/windows-10-games">Jeux PC</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/games/windows?icid=TopNavWindowsGames">Jeux pour Windows</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/movies-and-tv?icid=TopNavMoviesAndTv">Films et TV</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active d-lg-none">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Entreprise
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                    <a class="dropdown-item" href="https://azure.microsoft.com/fr-fr/">Microsoft Azure</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/dynamics365/home">Microsoft Dynamics 365</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/microsoft-365/?omkt=fr-FR">Microsoft 365</a>
+                                    <a class="dropdown-item" href="https://enterprise.microsoft.com/fr-fr/">Microsoft Industry</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/sql-server/">Plateforme de données</a>
+                                    <a class="dropdown-item" href="https://go.microsoft.com/fwlink/?linkid=2026638">Microsoft Advertising</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active d-lg-none">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Développeurs & IT
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                                    <a class="dropdown-item" href="https://www.microsoft.com/net/">.NET</a>
+                                    <a class="dropdown-item" href="https://visualstudio.microsoft.com/">Visual Studio</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/cloud-platform/windows-server">Windows Server</a>
+                                    <a class="dropdown-item" href="https://developer.microsoft.com/fr-fr/windows">Développez des applications Windows</a>
+                                    <a class="dropdown-item" href="https://docs.microsoft.com/fr-fr/">Docs</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active d-lg-none">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle col-12 text-left" type="button" id="dropdownMenu6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Autres
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu6">
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/b/home">Microsoft Store</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/rewards">Microsoft Rewards</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/download/default.aspx">Téléchargements gratuits et pour la sécurité</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/education?icid=CNavMSCOML0_Studentsandeducation">Éducation</a>
+                                    <a class="dropdown-item" href="https://www.microsoft.com/fr-fr/store/b/gift-cards">Cartes cadeaux</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item active d-lg-none">
+                            <a class="nav-link" href="https://www.microsoft.com/fr-fr/sitemap.aspx"><span class="M_soulign">VUE PLAN DU SITE ></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Partie droite de la navbar principale -->
+                <div class="d-flex">
+                    <!-- Menu avec gros menu déroulant, disparait en dessous d'écran large, laissant la place au menu déroulant -->
+                    <div class="btn-group d-none d-lg-block">
+                        <!-- Bouton du grand menu dropdown -->
+                        <button type="button" class="btn btn-default dropdown-toggle M_deroul" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="M_soulign">Tout Microsoft</span>
+                        </button>
+                        <!-- Contenu du menu déroulant -->
+                        <ul class="dropdown-menu M_dropdown M_fond">
+                            <div class="d-flex">
+                                <div class="p-2 flex-fill">
+                                    <li><p class="font-weight-bold">Logiciels</p></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/windows/windows-10-apps" title="Lien 2" class="M_noir">Applications Windows</a></li>
+                                    <li><a href="https://onedrive.live.com/about/fr-fr/" title="Lien 3" class="M_noir">OneDrive</a></li>
+                                    <li><a href="https://outlook.live.com/owa/" title="Lien 4" class="M_noir">Outlook</a></li>
+                                    <li><a href="https://www.skype.com/fr/" title="Lien 4" class="M_noir">Skype</a></li>
+                                    <li><a href="https://www.onenote.com/?omkt=fr-FR" title="Lien 4" class="M_noir">OneNote</a></li>
+                                </div>
+                                <div class="p-2 flex-fill">
+                                    <li><p class="font-weight-bold">PC et appareils</p></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/windows/devices" title="Lien 2" class="M_noir">PC et tablettes</a></li>
+                                    <li><a href="https://www.microsoft.com/accessories/fr-fr" title="Lien 3" class="M_noir">Accessoires</a></li>
+                                </div>
+                                <div class="p-2 flex-fill">
+                                    <li><p class="font-weight-bold">Divertissement</p></li>
+                                    <li><a href="https://www.xbox.com/fr-fr/games/xbox-one?xr=shellnav" title="Lien 2" class="M_noir">Xbox et jeux</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/windows/windows-10-games" title="Lien 3" class="M_noir">Jeux PC</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/store/games/windows?icid=TopNavWindowsGames" title="Lien 4" class="M_noir">Jeux pour Windows</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/store/movies-and-tv?icid=TopNavMoviesAndTv" title="Lien 4" class="M_noir">Films et TV</a></li>
+                                </div>
+                                <div class="p-2 flex-fill">
+                                    <li><p class="font-weight-bold">Entreprise</p></li>
+                                    <li><a href="https://azure.microsoft.com/fr-fr/" title="Lien 2" class="M_noir">Microsoft Azure</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/dynamics365/home" title="Lien 3" class="M_noir">Microsoft Dynamics 365</a></li>
+                                    <li><a href="https://www.microsoft.com/microsoft-365/?omkt=fr-FR" title="Lien 4" class="M_noir">Microsoft 365</a></li>
+                                    <li><a href="https://enterprise.microsoft.com/fr-fr/" title="Lien 4" class="M_noir">Microsoft Industry</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/sql-server/" title="Lien 4" class="M_noir">Plateforme de données</a></li>
+                                    <li><a href="https://go.microsoft.com/fwlink/?linkid=2026638" title="Lien 4" class="M_noir">Microsoft Advertising</a></li>
+                                </div>
+                                <div class="p-2 flex-fill">
+                                    <li><p class="font-weight-bold">Développeurs & IT</p></li>
+                                    <li><a href="https://www.microsoft.com/net/" title="Lien 2" class="M_noir">.NET</a></li>
+                                    <li><a href="https://visualstudio.microsoft.com/" title="Lien 4" class="M_noir">Visual Studio</a></li>
+                                    <li><a href="https://www.microsoft.com/cloud-platform/windows-server" title="Lien 4" class="M_noir">Windows Server</a></li>
+                                    <li><a href="https://developer.microsoft.com/fr-fr/windows" title="Lien 4" class="M_noir">Développez des applications Windows</a></li>
+                                    <li><a href="https://docs.microsoft.com/fr-fr/" title="Lien 4" class="M_noir">Docs</a></li>
+                                </div>
+                                <div class="p-2 flex-fill ">
+                                    <li><p class="font-weight-bold">Autres</p></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/store/b/home" title="Lien 2" class="M_noir">Microsoft Store</a></li>
+                                    <li><a href="https://www.microsoft.com/rewards" title="Lien 3" class="M_noir">Microsoft Rewards</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/download/default.aspx" title="Lien 4" class="M_noir">Téléchargements gratuits et pour la sécurité</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/education?icid=CNavMSCOML0_Studentsandeducation" title="Lien 4" class="M_noir">Éducation</a></li>
+                                    <li><a href="https://www.microsoft.com/fr-fr/store/b/gift-cards" title="Lien 4" class="M_noir">Cartes cadeaux</a></li>
+                                </div>
+                            </div>
+                            <div class="text-center M_basMenu">
+                                <a class="nav-link" href="https://www.microsoft.com/fr-fr/sitemap.aspx"><span class="M_soulign M_noir">VUE PLAN DU SITE ></span></a>
+                            </div>
+                        </ul>
+                    </div>
+                    <!-- Partie contenant la barre de recherche, le panier et le côté utilisateur -->
+                    <span class="d-none d-lg-flex">
+                        <!-- Barre de recherche s'agrandissant au focus -->
+                        <input class="search" type="text" name="search" placeholder="Recherche sur noMicrosoft ...">
+                        <a class="nav-link" href="https://www.microsoft.com/fr-fr/store/buy"><span class="M_noir M_soulign">Panier</span></a>
+                        <a class="nav-link connect" href="https://www.microsoft.com/mscomhp/onerf/signin?EEL=True&pcexp=True&ru=https%3A%2F%2Fwww.microsoft.com%2Ffr-fr%2F"><span class="M_noir">Se connecter</span><span class="sr-only"></span></a>
+                    </span>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- DÉBUT DE LA PARTIE CODE DE VICTOR -->
+            <div class="bd-example h-100">
+                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                    <!-- Ces ol représentent les indicateurs en bas du carrousel -->
+                    <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                      </ol>
-                      <div class="carousel-inner" role="listbox">
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active pause-hover">
-                          <!-- Image Carrousel1 -->
+                            <!-- Image Carrousel1 -->
                             <a href="https://www.microsoft.com/fr-fr/p/surface-pro-6/8ZCNC665SLQ5?activetab=pivot%3aoverviewtab"><img id="v_img" class="w-100" data-src="holder.js/900x300?auto=yes&amp;bg=777&amp;fg=555&amp;text=First slide" alt="First slide [900x300]" src="assets/img/Carrousel1.png" data-holder-rendered="true"></a>
                             <div class="v_diap1 text-left carousel-caption d-none d-md-block">
                                 <h3 id="v_h3">Nouvelle Surface Pro 6</h3>
@@ -51,7 +264,7 @@
                                 <!-- Bouton stylisé avec le CSS -->
                                 <button id="v_btn1" type="button" class="btn btn-light font-weight-bold"><span class="souligne">ACHETER MAINTENANT ></span></button>
                             </div>
-                                <!-- Zone de Texte 1 pour petits écrans -->
+                            <!-- Zone de Texte 1 pour petits écrans -->
                             <div class="v_zone1 d-md-none">
                                 <h3 id="v_text1">Nouvelle Surface Pro 6</h3>
                                 <p id="v_para1">Libérez-vous de l'ordinaire</p>
@@ -59,7 +272,7 @@
                             </div>
                         </div>
                         <div class="carousel-item pause-hover">
-                          <!-- Image Carrousel2 -->
+                            <!-- Image Carrousel2 -->
                             <a href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=1"><img id="v_img2" class="d-block w-100" data-src="holder.js/900x300?auto=yes&amp;bg=666&amp;fg=444&amp;text=Second slide" alt="Second slide [900x300]" src="assets/img/Carrousel2.jpeg" data-holder-rendered="true"></a>
                             <div class="v_diap2 text-left carousel-caption d-none d-md-block">
                                 <h3 id="v_h32">Votre quotidien avec Office 365</h3>
@@ -67,247 +280,248 @@
                                 <!-- Bouton stylisé avec le CSS -->
                                 <button id="v_btn2" type="button" class="btn btn-dark font-weight-bold"><span class="souligne2">ACHETER MAINTENANT ></span></button>
                             </div>
-                                <!-- Zone de Texte 2 pour petits écrans -->
+                            <!-- Zone de Texte 2 pour petits écrans -->
                             <div class="v_zone2 d-md-none">
                                 <h3 id="v_text2">Votre quotidien avec Office 365</h3>
                                 <p id="v_para2">Chaque jour est une nouvelle opportunité avec Office 365</p>
                                 <button id="v_btn22" type="button" class="btn btn-dark font-weight-bold"><span class="souligne2">ACHETER MAINTENANT ></span></button>
                             </div>
                         </div>
-                      </div>
-                      <!-- Plus bas, c'est l'espace des sélecteurs gauche et droite -->
-                      <a class="v_ind carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    </div>
+                    <!-- Plus bas, c'est l'espace des sélecteurs gauche et droite -->
+                    <a class="v_ind carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Précédent</span>
-                      </a>
-                      <a class="v_ind carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    </a>
+                    <a class="v_ind carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Suivant</span>
-                      </a>
+                    </a>
+                </div>
+            </div>
+            <!-- FIN DE LA PARTIE CODE DE VICTOR -->
+            <!-- 4  premiers articles affichage normal-->
+            <div class="row my-4 d-none d-sm-inline-flex">
+                <div class="col-md-6">
+                    <div class="row">
+                        <section class="col-6 my-2">
+                            <a href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">
+                                <img class="img-fluid bright" src="assets/img/article_1.jpeg" alt="Une femme tient le nouveau Surface Laptop 2">
+                            </a>
+                            <h3>Pour une vie moins ordinaire</h3>
+                            <p>Le nouveau Surface Laptop 2 est bien plus qu’un ordinateur portable traditionnel.</p>
+                            <a href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a>
+                        </section>
+                        <section class="col-6 my-2">
+                            <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">
+                                <img class="img-fluid bright" src="assets/img/article_2.jpeg" alt="La Xbox One X noire">
+                            </a>
+                            <h3>Xbox One X</h3>
+                            <p>La console la plus puissante au monde.</p>
+                            <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">ACHETER MAINTENANT ></a>
+                        </section>
                     </div>
-                  </div>
-                    <!-- FIN DE LA PARTIE CODE DE VICTOR -->
-                    <!-- 4  premiers articles affichage normal-->
-                    <div class="row my-4 d-none d-sm-inline-flex">
-                        <div class="col-md-6">
-                            <div class="row">
-                                <section class="col-6 my-2">
-                                    <a href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">
-                                        <img class="img-fluid bright" src="assets/img/article_1.jpeg" alt="Une femme tient le nouveau Surface Laptop 2">
-                                    </a>
-                                    <h3>Pour une vie moins ordinaire</h3>
-                                    <p>Le nouveau Surface Laptop 2 est bien plus qu’un ordinateur portable traditionnel.</p>
-                                    <a href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a>
-                                </section>
-                                <section class="col-6 my-2">
-                                    <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">
-                                        <img class="img-fluid bright" src="assets/img/article_2.jpeg" alt="La Xbox One X noire">
-                                    </a>
-                                    <h3>Xbox One X</h3>
-                                    <p>La console la plus puissante au monde.</p>
-                                    <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">ACHETER MAINTENANT ></a>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <section class=" col-6 my-2">
-                                    <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">
-                                        <img class="img-fluid bright" src="assets/img/article_3.jpeg" alt="La Xbox One S blanche">
-                                    </a>
-                                    <h3>Xbox One S</h3>
-                                    <p>Le meilleur du jeu et du divertissement avec la diffusion en continu de vidéo 4K.</p>
-                                    <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">ACHETER UNE XBOX ONE S ></a>
-                                </section>
-                                <section class="col-6 my-2">
-                                    <a href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">
-                                        <img class="img-fluid bright" src="assets/img/article_4.jpeg" alt="5 coloris de Surface Go">
-                                    </a>
-                                    <h3>Économisez 109 €</h3>
-                                    <p>Profitez de notre pack Surface Go.</p>
-                                    <a href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">EN PROFITER ></a>
-                                </section>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <section class=" col-6 my-2">
+                            <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">
+                                <img class="img-fluid bright" src="assets/img/article_3.jpeg" alt="La Xbox One S blanche">
+                            </a>
+                            <h3>Xbox One S</h3>
+                            <p>Le meilleur du jeu et du divertissement avec la diffusion en continu de vidéo 4K.</p>
+                            <a href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">ACHETER UNE XBOX ONE S ></a>
+                        </section>
+                        <section class="col-6 my-2">
+                            <a href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">
+                                <img class="img-fluid bright" src="assets/img/article_4.jpeg" alt="5 coloris de Surface Go">
+                            </a>
+                            <h3>Économisez 109 €</h3>
+                            <p>Profitez de notre pack Surface Go.</p>
+                            <a href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">EN PROFITER ></a>
+                        </section>
                     </div>
-                    <!-- le caroussel s'affiche en version mobile -->
-                    <div id="S_Carrousel_Articles_Haut" class="carousel slide d-sm-none mt-4" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="0" class="active"></li>
-                            <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="1"></li>
-                            <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="2"></li>
-                            <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="3"></li>
-                        </ol>
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/img/article_1.jpeg" data-src="holder.js/900x400?theme=social" alt="Premier article" data-holder-rendered="true">
-                                <div class="card-img-overlay ">
-                                    <h3>Pour une vie moins ordinaire</h3>
-                                    <p>Le nouveau Surface Laptop 2 est bien plus qu’un ordinateur portable traditionnel.</p>
-                                    <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a><p>
-                                    </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/article_2.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Deuxième article" data-holder-rendered="true">
-                                <div class="card-img-overlay ">
-                                    <h3>Xbox One X</h3>
-                                    <p>La console la plus puissante au monde.</p>
-                                    <p><a class="text-center" href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">ACHETER MAINTENANT ></a><p>
-                                    </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/article_3.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Troisième article" data-holder-rendered="true">
-                                    <div class="card-img-overlay ">
-                                        <h3>Xbox One S</h3>
-                                        <p>Le meilleur du jeu et du divertissement avec la diffusion en continu de vidéo 4K.</p>
-                                        <p><a class="text-center" href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">ACHETER UNE XBOX ONE S ></a><p>
-                                    </div>
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/img/article_4.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Quatrième article" data-holder-rendered="true">
-                                    <div class="card-img-overlay ">
-                                        <h3>Économisez 109 €</h3>
-                                        <p>Profitez de notre pack Surface Go.</p>
-                                        <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">EN PROFITER ></a><p>
-                                    </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#S_Carrousel_Articles_Haut" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#S_Carrousel_Articles_Haut" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                    <!-- Grand article -->
-                    <div id="S_Article_Principal" class="card mt-4 mb-md-4">
-                        <a href="https://www.microsoft.com/fr-fr/p/surface-headphones/8NRM8DZ2ZW43">
-                            <img class="img-fluid" src="assets/img/article_5.jpeg" alt="Une femme écoute de la musique avec une casque sur les oreilles">
-                        </a>
-                        <div class="card-img-overlay  d-none d-md-inline-block">
-                            <h2>Échappez à l'ordinaire</h2>
-                            <p>Nouveau Surface Headphones</p>
-                            <button id="bouton_grand_article" onclick="location.href='https://www.microsoft.com/fr-fr/p/surface-headphones/8NRM8DZ2ZW43'" type="button" class="btn btn-dark font-weight-bold">
-                                ACHETER MAINTENANT >
-                            </button>
+                </div>
+            </div>
+            <!-- le caroussel s'affiche en version mobile -->
+            <div id="S_Carrousel_Articles_Haut" class="carousel slide d-sm-none mt-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="0" class="active"></li>
+                    <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="1"></li>
+                    <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="2"></li>
+                    <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/article_1.jpeg" data-src="holder.js/900x400?theme=social" alt="Premier article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Pour une vie moins ordinaire</h3>
+                            <p>Le nouveau Surface Laptop 2 est bien plus qu’un ordinateur portable traditionnel.</p>
+                            <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a></p>
                         </div>
                     </div>
-                    <!-- cette div est cachée et s'affiche en mode mobile -->
-                    <div id="S_Article_Principal_hidden" class="my-O border text-center p-2 py-5 d-md-none mb-4 border-0">
-                        <h2>Échappez à l'ordinaire</h2>
-                        <p>Nouveau Surface Headphones</p>
-                        <button id="bouton_grand_article2" onclick="location.href='https://www.microsoft.com/fr-fr/p/surface-headphones/8NRM8DZ2ZW43'" type="button" class="btn btn-dark font-weight-bold">
-                            ACHETER MAINTENANT >
-                        </button>
-                    </div>
-                    <!-- au travail -->
-                    <h3>Au travail</h3>
-                    <!-- 4  derniers articles affichage normal-->
-                    <div class="row my-4 d-none d-sm-inline-flex">
-                        <div class="col-md-6 my-2">
-                            <div class="row">
-                                <section class="col-6 my-2">
-                                    <a href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">
-                                        <img class="img-fluid bright" src="assets/img/article_6.jpeg" alt="Un homme dessine sur la Surface Studio 2">
-                                    </a>
-                                    <h3>Surface Studio 2</h3>
-                                    <p>Développez votre créativité grâce à des couleurs éclatantes, des graphismes flamboyants et un processeur rapide.</p>
-                                    <a href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a>
-                                </section>
-                                <section class="col-6 my-2">
-                                    <a href="https://www.microsoft.com/fr-fr/itpro/windows-10">
-                                        <img class="img-fluid bright" src="assets/img/article_7.jpeg" alt="Un ordinateur affiche Windows 10 entreprise">
-                                    </a>
-                                    <h3>Windows 10 Entreprise</h3>
-                                    <p>Téléchargez l'évaluation gratuite de 90 jours pour les professionnels de l'informatique.</p>
-                                    <a href="https://www.microsoft.com/fr-fr/itpro/windows-10">TELECHARGER MAINTENANT ></a>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <section class="col-6 my-2">
-                                    <a href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">
-                                        <img class="img-fluid bright" src="assets/img/article_8.jpeg" alt="Un homme et une femme regardent un Ipad">
-                                    </a>
-                                    <h3>Office 365 pour les entreprises</h3>
-                                    <p>Accédez à vos fichiers depuis n’importe où, en ligne ou hors ligne.</p>
-                                    <a href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">ACHETER UNE XBOX ONE S ></a>
-                                </section>
-                                <section class="col-6 my-2">
-                                    <a href="https://azure.microsoft.com/campaigns/serverless">
-                                        <img class="img-fluid bright" src="assets/img/article_9.jpeg" alt="Un homme avec un casque audio travaille derrière ses écrans">
-                                    </a>
-                                    <h3>Microsoft Azure</h3>
-                                    <p>Passez au sans serveur. Créez des applications plus rapidement sans gérer l’infrastructure.</p>
-                                    <a href="https://azure.microsoft.com/campaigns/serverless">EN SAVOIR PLUS ></a>
-                                </section>
-                            </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/article_2.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Deuxième article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Xbox One X</h3>
+                            <p>La console la plus puissante au monde.</p>
+                            <p><a class="text-center" href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">ACHETER MAINTENANT ></a></p>
                         </div>
                     </div>
-                    <!-- le caroussel s'affiche en version mobile -->
-                    <div id="S_Carrousel_Articles_Bas" class="carousel slide d-sm-none my-4" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="0" class="active"></li>
-                            <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="1"></li>
-                            <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="2"></li>
-                            <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="3"></li>
-                        </ol>
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="carousel-item active">
-                                                <img class="d-block w-100" src="assets/img/article_6.jpeg" data-src="holder.js/900x400?theme=social" alt="Premier article" data-holder-rendered="true">
-                                                <div class="card-img-overlay ">
-                                                    <h3>Surface Studio 2</h3>
-                                                    <p>Développez votre créativité grâce à des couleurs éclatantes, des graphismes flamboyants et un processeur rapide.</p>
-                                                    <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a><p>
-                                                    </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="assets/img/article_7.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Deuxième article" data-holder-rendered="true">
-                                                <div class="card-img-overlay ">
-                                                    <h3>Windows 10 Entreprise</h3>
-                                                    <p>Téléchargez l'évaluation gratuite de 90 jours pour les professionnels de l'informatique.</p>
-                                                    <p><a class="text-center" href="https://www.microsoft.com/fr-fr/itpro/windows-10">TELECHARGER MAINTENANT ></a><p>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="assets/img/article_8.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Troisième article" data-holder-rendered="true">
-                                                <div class="card-img-overlay ">
-                                                    <h3>Office 365 pour les entreprises</h3>
-                                                    <p>Accédez à vos fichiers depuis n’importe où, en ligne ou hors ligne.</p>
-                                                    <p><a class="text-center" href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">ACHETER UNE XBOX ONE S ></a><p>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img class="d-block w-100" src="assets/img/article_9.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Quatrième article" data-holder-rendered="true">
-                                                <div class="card-img-overlay ">
-                                                    <h3>Microsoft Azure</h3>
-                                                    <p>Passez au sans serveur. Créez des applications plus rapidement sans gérer l’infrastructure.</p>
-                                                    <p><a class="text-center" href="https://azure.microsoft.com/campaigns/serverless">EN SAVOIR PLUS ></a><p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <a class="carousel-control-prev" href="#S_Carrousel_Articles_Bas" role="button" data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#S_Carrousel_Articles_Bas" role="button" data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div>
-              <!-- DÉBUT DE LA PARTIE RÉSEAUX SOCIAUX -->
-              <div class="v_divRS text-secondary">
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/article_3.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Troisième article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Xbox One S</h3>
+                            <p>Le meilleur du jeu et du divertissement avec la diffusion en continu de vidéo 4K.</p>
+                            <p><a class="text-center" href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">ACHETER UNE XBOX ONE S ></a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/article_4.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Quatrième article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Économisez 109 €</h3>
+                            <p>Profitez de notre pack Surface Go.</p>
+                            <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">EN PROFITER ></a></p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#S_Carrousel_Articles_Haut" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#S_Carrousel_Articles_Haut" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- Grand article -->
+            <div id="S_Article_Principal" class="card mt-4 mb-md-4">
+                <a href="https://www.microsoft.com/fr-fr/p/surface-headphones/8NRM8DZ2ZW43">
+                    <img class="img-fluid" src="assets/img/article_5.jpeg" alt="Une femme écoute de la musique avec une casque sur les oreilles">
+                </a>
+                <div class="card-img-overlay  d-none d-md-inline-block">
+                    <h2>Échappez à l'ordinaire</h2>
+                    <p>Nouveau Surface Headphones</p>
+                    <button id="bouton_grand_article" onclick="location.href='https://www.microsoft.com/fr-fr/p/surface-headphones/8NRM8DZ2ZW43'" type="button" class="btn btn-dark font-weight-bold">
+                        ACHETER MAINTENANT >
+                    </button>
+                </div>
+            </div>
+            <!-- cette div est cachée et s'affiche en mode mobile -->
+            <div id="S_Article_Principal_hidden" class="my-O border text-center p-2 py-5 d-md-none mb-4 border-0">
+                <h2>Échappez à l'ordinaire</h2>
+                <p>Nouveau Surface Headphones</p>
+                <button id="bouton_grand_article2" onclick="location.href='https://www.microsoft.com/fr-fr/p/surface-headphones/8NRM8DZ2ZW43'" type="button" class="btn btn-dark font-weight-bold">
+                    ACHETER MAINTENANT >
+                </button>
+            </div>
+            <!-- au travail -->
+            <h3>Au travail</h3>
+            <!-- 4  derniers articles affichage normal-->
+            <div class="row my-4 d-none d-sm-inline-flex">
+                <div class="col-md-6 my-2">
+                    <div class="row">
+                        <section class="col-6 my-2">
+                            <a href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">
+                                <img class="img-fluid bright" src="assets/img/article_6.jpeg" alt="Un homme dessine sur la Surface Studio 2">
+                            </a>
+                            <h3>Surface Studio 2</h3>
+                            <p>Développez votre créativité grâce à des couleurs éclatantes, des graphismes flamboyants et un processeur rapide.</p>
+                            <a href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a>
+                        </section>
+                        <section class="col-6 my-2">
+                            <a href="https://www.microsoft.com/fr-fr/itpro/windows-10">
+                                <img class="img-fluid bright" src="assets/img/article_7.jpeg" alt="Un ordinateur affiche Windows 10 entreprise">
+                            </a>
+                            <h3>Windows 10 Entreprise</h3>
+                            <p>Téléchargez l'évaluation gratuite de 90 jours pour les professionnels de l'informatique.</p>
+                            <a href="https://www.microsoft.com/fr-fr/itpro/windows-10">TELECHARGER MAINTENANT ></a>
+                        </section>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <section class="col-6 my-2">
+                            <a href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">
+                                <img class="img-fluid bright" src="assets/img/article_8.jpeg" alt="Un homme et une femme regardent un Ipad">
+                            </a>
+                            <h3>Office 365 pour les entreprises</h3>
+                            <p>Accédez à vos fichiers depuis n’importe où, en ligne ou hors ligne.</p>
+                            <a href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">ACHETER UNE XBOX ONE S ></a>
+                        </section>
+                        <section class="col-6 my-2">
+                            <a href="https://azure.microsoft.com/campaigns/serverless">
+                                <img class="img-fluid bright" src="assets/img/article_9.jpeg" alt="Un homme avec un casque audio travaille derrière ses écrans">
+                            </a>
+                            <h3>Microsoft Azure</h3>
+                            <p>Passez au sans serveur. Créez des applications plus rapidement sans gérer l’infrastructure.</p>
+                            <a href="https://azure.microsoft.com/campaigns/serverless">EN SAVOIR PLUS ></a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- le caroussel s'affiche en version mobile -->
+            <div id="S_Carrousel_Articles_Bas" class="carousel slide d-sm-none my-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="0" class="active"></li>
+                    <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="1"></li>
+                    <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="2"></li>
+                    <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="assets/img/article_6.jpeg" data-src="holder.js/900x400?theme=social" alt="Premier article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Surface Studio 2</h3>
+                            <p>Développez votre créativité grâce à des couleurs éclatantes, des graphismes flamboyants et un processeur rapide.</p>
+                            <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/article_7.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Deuxième article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Windows 10 Entreprise</h3>
+                            <p>Téléchargez l'évaluation gratuite de 90 jours pour les professionnels de l'informatique.</p>
+                            <p><a class="text-center" href="https://www.microsoft.com/fr-fr/itpro/windows-10">TELECHARGER MAINTENANT ></a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/article_8.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Troisième article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Office 365 pour les entreprises</h3>
+                            <p>Accédez à vos fichiers depuis n’importe où, en ligne ou hors ligne.</p>
+                            <p><a class="text-center" href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">ACHETER UNE XBOX ONE S ></a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="assets/img/article_9.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Quatrième article" data-holder-rendered="true">
+                        <div class="card-img-overlay ">
+                            <h3>Microsoft Azure</h3>
+                            <p>Passez au sans serveur. Créez des applications plus rapidement sans gérer l’infrastructure.</p>
+                            <p><a class="text-center" href="https://azure.microsoft.com/campaigns/serverless">EN SAVOIR PLUS ></a></p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#S_Carrousel_Articles_Bas" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#S_Carrousel_Articles_Bas" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!-- DÉBUT DE LA PARTIE RÉSEAUX SOCIAUX -->
+            <div class="v_divRS text-secondary">
                 Suivre Microsoft
                 <a href="https://www.facebook.com/MicrosoftFrance"><img src="assets/img/v_Facebook.png" class="v_RS mx-3" alt="Icone Facebook"></a>
                 <a href="https://twitter.com/microsoftfrance"><img src="assets/img/v_Twitter.jpg" class="v_RS" alt="Icone Twitter"></a>
                 <a href="https://www.linkedin.com/company/microsoft-france"><img src="assets/img/v_Linkedin.png" class="v_RS mx-3" alt="Icone Linkedin"></a>
                 <a href="https://www.youtube.com/channel/UC6mM0LIENRUTQ5yhs1v4xmg"><img src="assets/img/v_Youtube.jpg" class="v_RS" alt="Icone Youtube"></a>
-              </div>
-              <!-- FIN DE LA PARTIE RÉSEAUX SOCIAUX -->
-            </main>
+            </div>
+            <!-- FIN DE LA PARTIE RÉSEAUX SOCIAUX -->
+        </main>
         <!-- le footer contient plein de liens et les mentions légales -->
         <!-- Début de travail d'Andreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea -->
     </div>
@@ -317,117 +531,79 @@
             <div class="row my-4">
                 <section class="col-12 col-md-4 col-lg-2">
                     <h6>Nouveautés</h6>
-                    <p><a href="https://www.microsoft.com/p/surface-go/8v9dp4lnknsz"
-                            title="NOUVELLE Surface Go">NOUVELLE Surface Go</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/surface/devices/surface-book-2/overview"
-                            title="Surface Book 2">Surface Book 2</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/surface/devices/surface-pro/overview"
-                            title="Surface Pro">Surface Pro</a></p>
+                    <p><a href="https://www.microsoft.com/p/surface-go/8v9dp4lnknsz" title="NOUVELLE Surface Go">NOUVELLE Surface Go</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/surface/devices/surface-book-2/overview" title="Surface Book 2">Surface Book 2</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/surface/devices/surface-pro/overview" title="Surface Pro">Surface Pro</a></p>
                     <p><a href="https://www.xbox.com/fr-fr/xbox-one-x" title="Xbox One X">Xbox One X</a></p>
                     <p><a href="https://www.xbox.com/fr-fr/xbox-one-s?xr=shellnav" title="Xbox One S">Xbox One S</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/store/b/virtualreality" title="VR & réalité mixte">VR &
-                            réalité mixte</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/windows/windows-10-apps"
-                            title="Applications Windows 10">Applications Windows 10</a></p>
-                    <p><a href="https://store.office.com/fr-fr/appshome.aspx?" title="Applications Office">Applications
-                            Office</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/store/b/virtualreality" title="VR & réalité mixte">VR & réalité mixte</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/windows/windows-10-apps" title="Applications Windows 10">Applications Windows 10</a></p>
+                    <p><a href="https://store.office.com/fr-fr/appshome.aspx?" title="Applications Office">Applications Office</a></p>
                 </section>
                 <section class="col-12 col-md-4 col-lg-2">
                     <h6>Boutique & Support</h6>
                     <p><a href="https://account.microsoft.com/" title="Profil du compte">Profil du compte</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/download" title="Centre de téléchargement">Centre de
-                            téléchargement</a></p>
-                    <p><a href="https://go.microsoft.com/fwlink/p/?LinkID=824761&amp;clcid=0x40C"
-                            title="Ventes et support">Ventes et support</a></p>
-                    <p><a href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;clcid=0x40C"
-                            title="Retours">Retours</a></p>
-                    <p><a href="https://account.microsoft.com/orders" title="Suivi des commandes">Suivi des
-                            commandes</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/store/b/recycling?icid=GlobalFooterNav"
-                            title="Recycler">Recycler</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/store/b/aboutwarranties?icid=GlobalFooterNav"
-                            title="Garanties commerciales">Garanties commerciales</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/download" title="Centre de téléchargement">Centre de téléchargement</a></p>
+                    <p><a href="https://go.microsoft.com/fwlink/p/?LinkID=824761&amp;clcid=0x40C" title="Ventes et support">Ventes et support</a></p>
+                    <p><a href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;clcid=0x40C" title="Retours">Retours</a></p>
+                    <p><a href="https://account.microsoft.com/orders" title="Suivi des commandes">Suivi des commandes</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/store/b/recycling?icid=GlobalFooterNav" title="Recycler">Recycler</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/store/b/aboutwarranties?icid=GlobalFooterNav" title="Garanties commerciales">Garanties commerciales</a></p>
                 </section>
                 <section class="col-12 col-md-4 col-lg-2">
                     <h6>Éducation</h6>
-                    <p><a href="https://www.microsoft.com/fr-fr/education" title="Microsoft pour l'éducation">Microsoft
-                            pour l'éducation</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/education/products/office/default.aspx"
-                            title=" Office pour étudiants"> Office pour étudiants</a></p>
-                    <p><a href="https://products.office.com/fr-fr/academic/compare-office-365-education-plans"
-                            title="Office 365 pour les écoles">Office 365 pour les écoles</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/store/b/student?icid=CNavfooter_Studentsandeducation"
-                            title="Offres pour étudiants & parents">Offres pour étudiants & parents</a></p>
-                    <p><a href="https://azure.microsoft.com/fr-fr/community/education/"
-                            title="Microsoft Azure pour l'éducation ">Microsoft Azure pour l'éducation </a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/education" title="Microsoft pour l'éducation">Microsoft pour l'éducation</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/education/products/office/default.aspx" title=" Office pour étudiants"> Office pour étudiants</a></p>
+                    <p><a href="https://products.office.com/fr-fr/academic/compare-office-365-education-plans" title="Office 365 pour les écoles">Office 365 pour les écoles</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/store/b/student?icid=CNavfooter_Studentsandeducation" title="Offres pour étudiants & parents">Offres pour étudiants & parents</a></p>
+                    <p><a href="https://azure.microsoft.com/fr-fr/community/education/" title="Microsoft Azure pour l'éducation ">Microsoft Azure pour l'éducation </a></p>
                 </section>
                 <section class="col-12 col-md-4 col-lg-2">
                     <h6>Entreprise</h6>
                     <p><a href="https://azure.microsoft.com/" title="Microsoft Azure ">Microsoft Azure</a></p>
-                    <p><a href="https://enterprise.microsoft.com/fr-fr/" title="Microsoft Industry">Microsoft
-                            Industry</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/sql-server/" title="Plateforme de données">Plateforme de
-                            données</a></p>
-                    <p><a href="https://partner.microsoft.com/fr-fr/"
-                            title="Ressources pour partenaires Microsoft ">Ressources pour partenaires Microsoft</a></p>
+                    <p><a href="https://enterprise.microsoft.com/fr-fr/" title="Microsoft Industry">Microsoft Industry</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/sql-server/" title="Plateforme de données">Plateforme de données</a></p>
+                    <p><a href="https://partner.microsoft.com/fr-fr/" title="Ressources pour partenaires Microsoft ">Ressources pour partenaires Microsoft</a></p>
                     <p><a href="https://www.microsoft.com/fr-fr/enterprise/health" title="Santé">Santé</a></p>
-                    <p><a href="https://www.microsoft.com/fr-fr/enterprise/finance/banking-capital-markets"
-                            title="Services financiers">Services financiers</a></p>
+                    <p><a href="https://www.microsoft.com/fr-fr/enterprise/finance/banking-capital-markets" title="Services financiers">Services financiers</a></p>
                 </section>
                 <section class="col-12 col-md-4 col-lg-2">
                     <h6>Développeur</h6>
-                    <p><a href="https://visualstudio.microsoft.com/" title="Microsoft Visual Studio">Microsoft Visual
-                            Studio</a></p>
-                    <p><a href="https://developer.microsoft.com/fr-fr/windows"
-                            title="Centre de développement Windows">Centre de développement Windows</a></p>
-                    <p><a href="https://msdn.microsoft.com/fr-fr" title="Réseau de développeurs">Réseau de
-                            développeurs</a></p>
+                    <p><a href="https://visualstudio.microsoft.com/" title="Microsoft Visual Studio">Microsoft Visual Studio</a></p>
+                    <p><a href="https://developer.microsoft.com/fr-fr/windows" title="Centre de développement Windows">Centre de développement Windows</a></p>
+                    <p><a href="https://msdn.microsoft.com/fr-fr" title="Réseau de développeurs">Réseau de développeurs</a></p>
                     <p><a href="https://technet.microsoft.com/fr-fr" title="TechNet">TechNet</a></p>
-                    <p><a href="https://developer.microsoft.com/fr-fr/store/register"
-                            title="Programme pour développeur Microsoft">Programme pour développeur Microsoft</a></p>
+                    <p><a href="https://developer.microsoft.com/fr-fr/store/register" title="Programme pour développeur Microsoft">Programme pour développeur Microsoft</a></p>
                     <p><a href="https://channel9.msdn.com/" title="Channel 9">Channel 9</a></p>
-                    <p><a href="https://developer.microsoft.com/fr-fr/office"
-                            title="entre des développeurs Office">Centre des développeurs Office</a></p>
+                    <p><a href="https://developer.microsoft.com/fr-fr/office" title="entre des développeurs Office">Centre des développeurs Office</a></p>
                 </section>
                 <section class="col-12 col-md-4 col-lg-2">
                     <h6>Société</h6>
                     <p><a href="https://careers.microsoft.com/" title="Emploi">Emploi</a></p>
-                    <p><a href="https://news.microsoft.com/fr-fr" title="Actualités de la société">Actualités de la
-                            société</a></p>
-                    <p><a href="https://privacy.microsoft.com/fr-fr"
-                            title="Confidentialité chez Microsoft">Confidentialité chez Microsoft</a></p>
-                    <p><a href="https://www.microsoft.com/investor/default.aspx" title="Investisseurs">Investisseurs</a>
-                    </p>
+                    <p><a href="https://news.microsoft.com/fr-fr" title="Actualités de la société">Actualités de la société</a></p>
+                    <p><a href="https://privacy.microsoft.com/fr-fr" title="Confidentialité chez Microsoft">Confidentialité chez Microsoft</a></p>
+                    <p><a href="https://www.microsoft.com/investor/default.aspx" title="Investisseurs">Investisseurs</a></p>
                     <p><a href="https://www.microsoft.com/fr-fr/security/default.aspx" title="Sécurité">Sécurité</a></p>
                 </section>
             </div>
             <!-- La dérnière linie de footer -->
             <div class="row pb-3">
                 <div class="col-12 col-lg-2">
-                    <a href="https://www.microsoft.com/en-us/locale.aspx?absoluteReturnUrl=https%3a%2f%2fwww.microsoft.com%2ffr-fr%2f"
-                        title="Français"><i class="fas fa-globe-americas fa-lg"></i> Français (France)</a>
+                    <a href="https://www.microsoft.com/en-us/locale.aspx?absoluteReturnUrl=https%3a%2f%2fwww.microsoft.com%2ffr-fr%2f" title="Français"><i class="fas fa-globe-americas fa-lg"></i> Français (France)</a>
                 </div>
                 <div class="col text-left text-lg-right d-inline-sm-block">
-                    <a href="https://support.microsoft.com/fr-fr/contactus" title="Contacter Microsoft">Contacter
-                        Microsoft</a>
-                    <a class="mx-2" href="https://go.microsoft.com/fwlink/?LinkId=521839"
-                        title="Confidentialité et Cookies">Confidentialité et Cookies</a>
-                    <a class="mx-2" href="https://go.microsoft.com/fwlink/?LinkID=206977"
-                        title="Conditions d'utilisation">Conditions
-                        d'utilisation</a>
+                    <a href="https://support.microsoft.com/fr-fr/contactus" title="Contacter Microsoft">Contacter Microsoft</a>
+                    <a class="mx-2" href="https://go.microsoft.com/fwlink/?LinkId=521839" title="Confidentialité et Cookies">Confidentialité et Cookies</a>
+                    <a class="mx-2" href="https://go.microsoft.com/fwlink/?LinkID=206977" title="Conditions d'utilisation">Conditions d'utilisation</a>
                     <a class="mx-2" href="https://www.microsoft.com/trademarks" title="Marques">Marques</a>
-                    <a class="mx-2" href="https://choice.microsoft.com/" title="À propos de nos annonces">À propos de
-                        nos
-                        annonces</a>
-                    <a class="mx-2" href="https://www.microsoft.com/en-ie/eucompliancedoc/default.aspx"
-                        title="EU Compliance DoCs">EU
-                        Compliance DoCs</a>
+                    <a class="mx-2" href="https://choice.microsoft.com/" title="À propos de nos annonces">À propos de nos annonces</a>
+                    <a class="mx-2" href="https://www.microsoft.com/en-ie/eucompliancedoc/default.aspx" title="EU Compliance DoCs">EU Compliance DoCs</a>
                     <a class="mx-2" href="" title="Microsoft 2019">© Microsoft 2019</a>
                 </div>
             </div>
         </footer>
-        </div>
-        <!-- Fin de travail d'Andreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea -->
+    </div>
+    <!-- Fin de travail d'Andreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea -->
     <!-- ne pas toucher les scripts ci-dessous -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
