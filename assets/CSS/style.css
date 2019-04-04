@@ -4,7 +4,7 @@
   width: 28px;
   height: 28px;
 }
-.v_RS:hover{
+.v_RS:hover, .bright:hover{
     opacity:.85;
 }
 /* Passer la souris sur les boutons pour que le texte se souligne */
@@ -46,7 +46,7 @@
   border-radius: 0px;
   color: black
 }
-#v_btn2, #v_btn22{
+#v_btn2, #v_btn22, #bouton_grand_article, #bouton_grand_article2{
   background-color: black;
   border-radius: 0px;
 }
@@ -122,8 +122,13 @@
 /* Début CSS Sébastieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeen */
 /* les titre h3 du main sont en gras */
 main h3{
+    margin-top: 20px;
     font-weight: bold;
     font-size: 1.2em;
+}
+main a{
+    font-weight: bold;
+    font-size: .9em;
 }
 /* le text de l'article principal doit être centré verticalement */
 #S_Article_Principal div{
@@ -131,6 +136,13 @@ main h3{
     top: 25%;
 }
 /* effet de grossissement du texte lors du passage sur le boutton de l'article principal */
+#S_Article_Principal_hidden{
+    background-color: #e6e6e6;
+}
+#S_Article_Principal_hidden h2{
+    font-size: 1.4em;
+    font-weight: bold;
+}
 #S_Article_Principal button, #S_Article_Principal_hidden button{
     text-align: center;
     transition: all .2s ease-in-out;
@@ -166,10 +178,13 @@ main h3{
 }
 footer a{
   color: gray;
-  font-size: small;
+  font-size: .7em;
+}
+footer a:hover{
+    color: black;
 }
 footer h6{
-  color: gray;
+  color: #61616a;
   font-weight: bold;
   margin-top: 10%;
 }
