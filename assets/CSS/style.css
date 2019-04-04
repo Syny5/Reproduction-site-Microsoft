@@ -34,13 +34,20 @@
   margin-left: -40px;
 }
 
+/* Modification des images du Carrousel */
+#v_img, #v_img2{
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+
 /* Style du texte à l'intérieur des images (<767px) */
 #v_btn1{
   border-radius: 0px;
   color: black
 }
 
-#v_btn2{
+#v_btn2, #v_btn22{
   background-color: black;
   border-radius: 0px;
 }
@@ -130,7 +137,7 @@
 
 /* À partir d'ici, ce sont les media-queries, indispensables à un responsive correct. */
 
-@media all and (max-width:539px){
+/*@media all and (max-width:539px){
   #v_img{
     height: 301px;
     width:100%;
@@ -145,10 +152,10 @@
     object-fit: cover;
   }
 }
-
+*/
 /* Moins de 767px = apparition de la zone texte & Plus de 768px = disparition de la zone texte */
 
-@media all and (min-width:768px) and (max-width:1083px){
+/* @media all and (min-width:768px) and (max-width:1083px){
   #v_img{
     height: 508px;
     width:100%;
@@ -165,6 +172,8 @@
 @media all and (min-width:1084px) and (max-width:1399px){
   #v_img{
     height: 409px;
+    width: 100%;
+
     object-fit: cover;
   }
   .v_zone1{
@@ -187,3 +196,4 @@
     display: none;
   }
 }
+*/
