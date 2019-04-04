@@ -1,5 +1,4 @@
-/* CSS pour projet de groupe "VASM" */
-
+/* Début CSS Sébastieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeen */
 /* les titre h3 du main sont en gras */
 main h3{
     font-weight: bold;
@@ -11,11 +10,11 @@ main h3{
     top: 25%;
 }
 /* effet de grossissement du texte lors du passage sur le boutton de l'article principal */
-#S_Article_Principal button{
+#S_Article_Principal button, #S_Article_Principal_hidden button{
     text-align: center;
     transition: all .2s ease-in-out;
 }
-#S_Article_Principal button:hover
+#S_Article_Principal button:hover, #S_Article_Principal_hidden button:hover
 {
     text-decoration:underline;
     letter-spacing: 1px;
@@ -28,6 +27,7 @@ main h3{
     text-align: center;
     font-weight: bold;
 }
+/* mise en forme du texte des carousels de type article */
 #S_Carrousel_Articles_Haut p, #S_Carrousel_Articles_Haut h3,
 #S_Carrousel_Articles_Bas p, #S_Carrousel_Articles_Bas h3{
     text-shadow: 0px 1px 10px white;
@@ -36,3 +36,4 @@ main h3{
 #S_Carrousel_Articles_Haut a, #S_Carrousel_Articles_Bas a{
     text-shadow: 0px 1px 1px black;
 }
+/* fin CSS Sébastieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeen */
