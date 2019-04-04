@@ -157,3 +157,26 @@ main h3{
 #S_Carrousel_Articles_Haut a, #S_Carrousel_Articles_Bas a{
     text-shadow: 0px 1px 1px black;
 }
+/* CSS ANDREEA */
+.cookie{
+  font-size: small;
+}
+.couleur1{
+  background: #F2F2F2;
+}
+footer a{
+  color: gray;
+  font-size: small;
+}
+footer h6{
+  color: gray;
+  font-weight: bold;
+  margin-top: 10%;
+}
+footer p{
+  margin-bottom: 6px;
+}
+footer .row, #alertcookie .row{
+  margin-left: 15px;
+  margin-right: 15px;
+}
