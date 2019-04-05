@@ -605,6 +605,22 @@
     </div>
     <!-- Fin de travail d'Andreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea -->
     <!-- ne pas toucher les scripts ci-dessous -->
+    <script>
+          function myFunction()
+          {
+            // Variable x prenant comme valeur l'élément avec l'id éléACaché
+            var x = document.getElementById("élemACaché");
+            // Si son display est égale à block alors ...
+            if (x.style.display === "block") {
+              // ... on le change en display none (il disparait)...
+              x.style.display = "none";
+              // ... sinon ...
+            } else {
+              // ... on change en display block (il réapparaît)
+              x.style.display = "block";
+            }
+          }
+        </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 </body>
