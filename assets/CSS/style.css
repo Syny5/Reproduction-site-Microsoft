@@ -173,7 +173,8 @@ footer a{
 footer a:hover{
     color: black;
 }
-footer h6{
+footer h4{
+  font-size: 1em;
   color: #61616a;
   font-weight: bold;
   margin-top: 10%;
@@ -253,8 +254,8 @@ en mode petit sans que ça touche la version grande */
   /* En absolue pour qu'elle puisse passer au dessus d'autres éléments */
   position: absolute;
   width: 55%;
-  top: 1.35em;
-  left: 7.2em;
+  top: 2em;
+  left: 8em;
 }
 /* Classe pour la barre de recherche grand écran */
 .search
