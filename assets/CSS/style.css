@@ -14,10 +14,6 @@
 .souligne2:hover{
   border-bottom: 2px solid white;
 }
-/* Cacher les sélécteurs gauche/droite */
-.v_ind{
-  opacity: 0;
-}
 /* Les indicateurs deviennent des petits points */
 .carousel-indicators li {
   width: 5px;
@@ -143,35 +139,29 @@ main a{
     font-size: 1.4em;
     font-weight: bold;
 }
-#S_Article_Principal button, #S_Article_Principal_hidden button{
+#S_Article_Principal button, #S_Article_Principal_hidden button, #carouselExampleCaptions button{
     text-align: center;
     transition: all .2s ease-in-out;
 }
-#S_Article_Principal button:hover, #S_Article_Principal_hidden button:hover
+#S_Article_Principal button:hover, #S_Article_Principal_hidden button:hover, #carouselExampleCaptions button:hover
 {
     text-decoration:underline;
     letter-spacing: 1px;
 }
 /* carrousel articles haut (ne s'affiche qu'en mobile)*/
 #S_Carrousel_Articles_Haut, #S_Carrousel_Articles_Bas{
-    height: auto;
+    min-height: 420px;
     width: 100%;
     margin: auto;
     text-align: center;
-    font-weight: bold;
 }
 /* mise en forme du texte des carousels de type article */
-#S_Carrousel_Articles_Haut p, #S_Carrousel_Articles_Haut h3,
-#S_Carrousel_Articles_Bas p, #S_Carrousel_Articles_Bas h3{
-    text-shadow: 0px 1px 10px white;
+#S_Carrousel_Articles_Haut h3, #S_Carrousel_Articles_Bas h3{
     color: black;
-}
-#S_Carrousel_Articles_Haut a, #S_Carrousel_Articles_Bas a{
-    text-shadow: 0px 1px 1px black;
 }
 /* CSS ANDREEA */
 .cookie{
-  font-size: small;
+  font-size: .7em;
 }
 .couleur1{
   background: #F2F2F2;
@@ -247,7 +237,7 @@ en mode petit sans que ça touche la version grande */
 /* Modif la position du menu dropdown grand écran */
 .M_dropdown
 {
-  left: -800px;
+  left: -700px;
   width: 1100px;
 }
 /* Permet de prendre 100% de la place dispo */
@@ -278,4 +268,8 @@ en mode petit sans que ça touche la version grande */
 .search:focus
 {
   width: 12em;
+}
+header, header .btn, header .dropdown-menu
+{
+  font-size: 13px;
 }

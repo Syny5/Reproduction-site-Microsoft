@@ -176,7 +176,7 @@
                 <!-- Partie droite de la navbar principale -->
                 <div class="d-flex">
                     <!-- Menu avec gros menu déroulant, disparait en dessous d'écran large, laissant la place au menu déroulant -->
-                    <div class="btn-group d-none d-lg-block">
+                    <div class="btn-group d-none d-lg-block pr-1">
                         <!-- Bouton du grand menu dropdown -->
                         <button type="button" class="btn btn-default dropdown-toggle M_deroul" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="M_soulign">Tout Microsoft</span>
@@ -248,7 +248,7 @@
         <main>
             <!-- DÉBUT DE LA PARTIE CODE DE VICTOR -->
             <div class="bd-example h-100">
-                <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleCaptions" class="carousel slide" data-interval="3000" data-ride="carousel">
                     <!-- Ces ol représentent les indicateurs en bas du carrousel -->
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -262,13 +262,13 @@
                                 <h3 id="v_h3">Nouvelle Surface Pro 6</h3>
                                 <p id="v_pa">Libérez-vous de l'ordinaire</p>
                                 <!-- Bouton stylisé avec le CSS -->
-                                <button id="v_btn1" type="button" class="btn btn-light font-weight-bold"><span class="souligne">ACHETER MAINTENANT ></span></button>
+                                <button id="v_btn1" type="button" onclick="location.href='https://www.microsoft.com/fr-fr/p/surface-pro-6/8ZCNC665SLQ5?activetab=pivot%3aoverviewtab'" class="btn btn-light font-weight-bold"><span class="souligne">ACHETER MAINTENANT ></span></button>
                             </div>
                             <!-- Zone de Texte 1 pour petits écrans -->
                             <div class="v_zone1 d-md-none">
                                 <h3 id="v_text1">Nouvelle Surface Pro 6</h3>
                                 <p id="v_para1">Libérez-vous de l'ordinaire</p>
-                                <button id="v_button1" type="button" class="btn btn-light font-weight-bold d-block"><span class="souligne">ACHETER MAINTENANT ></span></button>
+                                <button id="v_button1" type="button" onclick="location.href='https://www.microsoft.com/fr-fr/p/surface-pro-6/8ZCNC665SLQ5?activetab=pivot%3aoverviewtab'" class="btn btn-light font-weight-bold d-block"><span class="souligne">ACHETER MAINTENANT ></span></button>
                             </div>
                         </div>
                         <div class="carousel-item pause-hover">
@@ -278,13 +278,13 @@
                                 <h3 id="v_h32">Votre quotidien avec Office 365</h3>
                                 <p id="v_p">Chaque jour est une nouvelle opportunité avec Office 365</p>
                                 <!-- Bouton stylisé avec le CSS -->
-                                <button id="v_btn2" type="button" class="btn btn-dark font-weight-bold"><span class="souligne2">ACHETER MAINTENANT ></span></button>
+                                <button id="v_btn2" type="button" onclick="location.href='https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=1'" class="btn btn-dark font-weight-bold"><span class="souligne2">ACHETER MAINTENANT ></span></button>
                             </div>
                             <!-- Zone de Texte 2 pour petits écrans -->
                             <div class="v_zone2 d-md-none">
                                 <h3 id="v_text2">Votre quotidien avec Office 365</h3>
                                 <p id="v_para2">Chaque jour est une nouvelle opportunité avec Office 365</p>
-                                <button id="v_btn22" type="button" class="btn btn-dark font-weight-bold"><span class="souligne2">ACHETER MAINTENANT ></span></button>
+                                <button id="v_btn22" type="button" onclick="location.href='https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=1'" class="btn btn-dark font-weight-bold"><span class="souligne2">ACHETER MAINTENANT ></span></button>
                             </div>
                         </div>
                     </div>
@@ -344,7 +344,7 @@
                 </div>
             </div>
             <!-- le caroussel s'affiche en version mobile -->
-            <div id="S_Carrousel_Articles_Haut" class="carousel slide d-sm-none mt-4" data-ride="carousel">
+            <div id="S_Carrousel_Articles_Haut" class="carousel slide d-sm-none mt-4" data-interval="3000" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="0" class="active"></li>
                     <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="1"></li>
@@ -352,33 +352,33 @@
                     <li data-target="#S_Carrousel_Articles_Haut" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active pause-hover">
                         <img class="d-block w-100" src="assets/img/article_1.jpeg" data-src="holder.js/900x400?theme=social" alt="Premier article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Pour une vie moins ordinaire</h3>
                             <p>Le nouveau Surface Laptop 2 est bien plus qu’un ordinateur portable traditionnel.</p>
                             <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-laptop-2/8XQJKK3DD91B?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item pause-hover">
                         <img class="d-block w-100" src="assets/img/article_2.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Deuxième article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Xbox One X</h3>
                             <p>La console la plus puissante au monde.</p>
                             <p><a class="text-center" href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles">ACHETER MAINTENANT ></a></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item pause-hover">
                         <img class="d-block w-100" src="assets/img/article_3.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Troisième article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Xbox One S</h3>
                             <p>Le meilleur du jeu et du divertissement avec la diffusion en continu de vidéo 4K.</p>
                             <p><a class="text-center" href="https://www.microsoft.com/fr-fr/store/collections/xboxconsoles/">ACHETER UNE XBOX ONE S ></a></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item pause-hover">
                         <img class="d-block w-100" src="assets/img/article_4.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Quatrième article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Économisez 109 €</h3>
                             <p>Profitez de notre pack Surface Go.</p>
                             <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-go-TC-pen-bundle/8PP6GGV6K4JW">EN PROFITER ></a></p>
@@ -469,33 +469,33 @@
                     <li data-target="#S_Carrousel_Articles_Bas" data-slide-to="3"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active pause-hover">
                         <img class="d-block w-100" src="assets/img/article_6.jpeg" data-src="holder.js/900x400?theme=social" alt="Premier article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Surface Studio 2</h3>
                             <p>Développez votre créativité grâce à des couleurs éclatantes, des graphismes flamboyants et un processeur rapide.</p>
                             <p><a class="text-center" href="https://www.microsoft.com/fr-fr/p/surface-studio-2/8sbjxm0m58t4?activetab=pivot%3aoverviewtab">ACHETER MAINTENANT ></a></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item pause-hover">
                         <img class="d-block w-100" src="assets/img/article_7.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Deuxième article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Windows 10 Entreprise</h3>
                             <p>Téléchargez l'évaluation gratuite de 90 jours pour les professionnels de l'informatique.</p>
                             <p><a class="text-center" href="https://www.microsoft.com/fr-fr/itpro/windows-10">TELECHARGER MAINTENANT ></a></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item pause-hover">
                         <img class="d-block w-100" src="assets/img/article_8.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Troisième article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Office 365 pour les entreprises</h3>
                             <p>Accédez à vos fichiers depuis n’importe où, en ligne ou hors ligne.</p>
                             <p><a class="text-center" href="https://products.office.com/fr-fr/compare-all-microsoft-office-products?tab=2&OCID=AID679471_OO_HLW_mscomrefresh">ACHETER UNE XBOX ONE S ></a></p>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item pause-hover">
                         <img class="d-block w-100" src="assets/img/article_9.jpeg" data-src="holder.js/900x400?theme=industrial" alt="Quatrième article" data-holder-rendered="true">
-                        <div class="card-img-overlay ">
+                        <div>
                             <h3>Microsoft Azure</h3>
                             <p>Passez au sans serveur. Créez des applications plus rapidement sans gérer l’infrastructure.</p>
                             <p><a class="text-center" href="https://azure.microsoft.com/campaigns/serverless">EN SAVOIR PLUS ></a></p>
@@ -603,8 +603,7 @@
             </div>
         </footer>
     </div>
-    <!-- Fin de travail d'Andreeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeea -->
-    <!-- ne pas toucher les scripts ci-dessous -->
+    <!-- faire apparaitre la barre de recherche -->
     <script>
           function myFunction()
           {
@@ -620,7 +619,19 @@
               x.style.display = "block";
             }
           }
-        </script>
+    </script>
+    <!-- ajouter le swipe en mode mobile pour le carrousel -->
+    <script>
+        $(".carousel").swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+                if (direction == 'left') $(this).carousel('next');
+                if (direction == 'right') $(this).carousel('prev');
+            },
+            allowPageScroll:"vertical"
+        });
+    </script>
+    <!-- scripts boostrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
 </body>
